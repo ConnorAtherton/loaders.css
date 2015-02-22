@@ -1,0 +1,52 @@
+//Based on: http://codepen.io/Akiletour/pen/emGOgd
+
+// Variables
+$loader-size: 100px;
+$loader-dot-size: ($loader-size / 5); //20
+$loader-height: $loader-dot-size; //20
+$loader-dot-color: #2196F3;
+
+.shift {
+  width: $loader-size;
+  height: $loader-height;
+  position: relative;
+
+  > div {
+    content: " ";
+    width: $loader-dot-size;
+    height: $loader-dot-size;
+    background: $loader-dot-color;
+    border-radius: 100%;
+    position: absolute;
+    animation: shift 2s linear infinite;
+
+    &:nth-of-type(1) { animation-delay: -.4s; }
+    &:nth-of-type(2) { animation-delay: -.8s; }
+    &:nth-of-type(3) { animation-delay: -1.2s; }
+    &:nth-of-type(4) { animation-delay: -1.6s; }
+  }
+}
+
+@keyframes shift {
+  0%{
+    left: -$loader-dot-size;
+    opacity: 0;
+    background-color: yellow;
+  }
+  20% {
+    left: $loader-dot-size;
+    opacity: 1;
+  }
+  80% {
+    left: $loader-size - $loader-dot-size;
+    opacity: 1;
+  }
+  100%{
+    left: ($loader-size + $loader-dot-size);
+    background-color: red;
+    opacity: 0;
+  }
+}
+
+
+

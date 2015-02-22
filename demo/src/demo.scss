@@ -1,3 +1,45 @@
-h1 {
-  color: blue;
+/**
+ *
+ *
+ */
+$gray: #dcdcdc;
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-size: 16px;
 }
+
+#container {
+  width: 95%;
+  max-width: 650px;
+  margin: 4em auto;
+
+  #loaders {
+    clear: both;
+
+    .loader-row {
+      height: 200px;
+
+      &:not(:last-child) {
+        border-bottom: 1px dashed $gray;
+      }
+    }
+
+    .loader {
+      width: 200px;
+      height: 200px;
+      float: left;
+
+      &:nth-child(1) {
+        border-right: 1px dashed $gray;
+      }
+
+      &:nth-child(3) {
+        border-left: 1px dashed $gray;
+      }
+    }
+  }
+}
+

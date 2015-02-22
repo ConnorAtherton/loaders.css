@@ -1,7 +1,239 @@
-body {
-  background: black;
-  color: green;
-  color: blue; }
+/**
 
-h1 {
-  color: red; }
+  All animations must live in their own file
+  in the animations directory and be included
+  here.
+
+*/
+/**
+ * Dots
+ */
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+
+  25% {
+    -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+    background: #74aad3; }
+
+  50% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    background: #2a5d84; }
+
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); } }
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+
+  25% {
+    -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+    background: #74aad3; }
+
+  50% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    background: #2a5d84; }
+
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); } }
+
+.ball-pulse > span:nth-child(0) {
+  border-radius: 30px;
+  -webkit-animation: scale 0.75s 0s infinite cubic-bezier(.2, .68, .18, 1.08);
+          animation: scale 0.75s 0s infinite cubic-bezier(.2, .68, .18, 1.08); }
+.ball-pulse > span:nth-child(1) {
+  border-radius: 30px;
+  -webkit-animation: scale 0.75s 0.1s infinite cubic-bezier(.2, .68, .18, 1.08);
+          animation: scale 0.75s 0.1s infinite cubic-bezier(.2, .68, .18, 1.08); }
+.ball-pulse > span:nth-child(2) {
+  border-radius: 30px;
+  -webkit-animation: scale 0.75s 0.2s infinite cubic-bezier(.2, .68, .18, 1.08);
+          animation: scale 0.75s 0.2s infinite cubic-bezier(.2, .68, .18, 1.08); }
+.ball-pulse > span:nth-child(3) {
+  border-radius: 30px;
+  -webkit-animation: scale 0.75s 0.3s infinite cubic-bezier(.2, .68, .18, 1.08);
+          animation: scale 0.75s 0.3s infinite cubic-bezier(.2, .68, .18, 1.08); }
+.ball-pulse > span {
+  color: #2a5d84;
+  height: 17px;
+  width: 17px;
+  display: inline-block;
+  margin: 20px 5px; }
+
+.shift {
+  width: 100px;
+  height: 20px;
+  position: relative; }
+  .shift > div {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    background: #2196F3;
+    border-radius: 100%;
+    position: absolute;
+    -webkit-animation: shift 2s linear infinite;
+            animation: shift 2s linear infinite; }
+    .shift > div:nth-of-type(1) {
+      -webkit-animation-delay: -.4s;
+              animation-delay: -.4s; }
+    .shift > div:nth-of-type(2) {
+      -webkit-animation-delay: -.8s;
+              animation-delay: -.8s; }
+    .shift > div:nth-of-type(3) {
+      -webkit-animation-delay: -1.2s;
+              animation-delay: -1.2s; }
+    .shift > div:nth-of-type(4) {
+      -webkit-animation-delay: -1.6s;
+              animation-delay: -1.6s; }
+
+@-webkit-keyframes shift {
+  0% {
+    left: -20px;
+    opacity: 0;
+    background-color: yellow; }
+
+  20% {
+    left: 20px;
+    opacity: 1; }
+
+  80% {
+    left: 80px;
+    opacity: 1; }
+
+  100% {
+    left: 120px;
+    background-color: red;
+    opacity: 0; } }
+
+@keyframes shift {
+  0% {
+    left: -20px;
+    opacity: 0;
+    background-color: yellow; }
+
+  20% {
+    left: 20px;
+    opacity: 1; }
+
+  80% {
+    left: 80px;
+    opacity: 1; }
+
+  100% {
+    left: 120px;
+    background-color: red;
+    opacity: 0; } }
+
+/**
+ * Lines
+ */
+@-webkit-keyframes shuffle {
+  0% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg); }
+
+  35% {
+    -webkit-transform: skewX(-20deg);
+            transform: skewX(-20deg); }
+
+  50% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg); }
+
+  65% {
+    -webkit-transform: skewX(20deg);
+            transform: skewX(20deg); }
+
+  100% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg); } }
+@keyframes shuffle {
+  0% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg); }
+
+  35% {
+    -webkit-transform: skewX(-20deg);
+            transform: skewX(-20deg); }
+
+  50% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg); }
+
+  65% {
+    -webkit-transform: skewX(20deg);
+            transform: skewX(20deg); }
+
+  100% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg); } }
+
+.shuffle > span {
+  display: inline-block;
+  height: 30px;
+  border-radius: 2px;
+  width: 4px;
+  background: red;
+  margin: 0 2px;
+  -webkit-animation: shuffle 1s 0 infinite linear;
+          animation: shuffle 1s 0 infinite linear; }
+
+@-webkit-keyframes line-bounce {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg); }
+
+  25% {
+    -webkit-transform: rotateX(-50deg);
+            transform: rotateX(-50deg); }
+
+  50% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg); }
+
+  75% {
+    -webkit-transform: rotateX(50deg);
+            transform: rotateX(50deg); }
+
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg); } }
+
+@keyframes line-bounce {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg); }
+
+  25% {
+    -webkit-transform: rotateX(-50deg);
+            transform: rotateX(-50deg); }
+
+  50% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg); }
+
+  75% {
+    -webkit-transform: rotateX(50deg);
+            transform: rotateX(50deg); }
+
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg); } }
+
+.line-bounce > span {
+  display: inline-block;
+  height: 30px;
+  border-radius: 2px;
+  width: 4px;
+  background: red;
+  margin: 0 2px;
+  -webkit-animation: line-bounce 1s 0 infinite linear;
+          animation: line-bounce 1s 0 infinite linear; }

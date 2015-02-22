@@ -1,0 +1,36 @@
+@keyframes shuffle {
+  0% {
+    transform: skewX(0deg);
+  }
+
+  35% {
+    transform: skewX(-20deg);
+  }
+  50% {
+    transform: skewX(0deg);
+  }
+  65% {
+    transform: skewX(20deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+
+@mixin shuffle() {
+
+}
+
+.shuffle {
+  @include shuffle();
+
+  > span {
+    display:inline-block;
+    height: 30px;
+    border-radius: 2px;
+    width: 4px;
+    background: red;
+    margin: 0 2px;
+    animation: shuffle 1s 0 infinite linear;
+  }
+}

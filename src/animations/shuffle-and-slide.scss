@@ -1,0 +1,30 @@
+@keyframes line-bounce {
+  0% {
+    transform: rotateX(0deg);
+  }
+  25% {
+    transform: rotateX(-50deg);
+  }
+  50% {
+    transform: rotateX(0deg);
+  }
+  75% {
+    transform: rotateX(50deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.line-bounce {
+
+  > span {
+    display:inline-block;
+    height: 30px;
+    border-radius: 2px;
+    width: 4px;
+    background: red;
+    margin: 0 2px;
+    animation: line-bounce 1s 0 infinite linear;
+  }
+}

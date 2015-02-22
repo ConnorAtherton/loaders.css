@@ -1,9 +1,19 @@
-body {
-  background: black;
-  color: green;
-  color: blue;
-}
+/**
 
-h1 {
-  color: red;
-}
+  All animations must live in their own file
+  in the animations directory and be included
+  here.
+
+*/
+
+/**
+ * Dots
+ */
+@import 'animations/ball-pulse';
+@import 'animations/shift';
+
+/**
+ * Lines
+ */
+@import 'animations/shuffle';
+@import 'animations/shuffle-and-slide';

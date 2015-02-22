@@ -4,6 +4,7 @@ var jade = require('gulp-jade');
 var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
+var gutil = require('gulp-util');
 
 gulp.task('scss:compile', function() {
   return gulp.src('./src/loaders.scss')
@@ -19,7 +20,7 @@ gulp.task('scss:compile', function() {
 
 gulp.task('demo:scss:compile', function() {
   return gulp.src('./demo/src/demo.scss')
-    .pipe(sass())
+    .pipe(sass({errLogToConsole: true}).on("error", gutil.log).on("error", gutil.beep))
     .pipe(gulp.dest('./demo/'));
 });
 
