@@ -1,0 +1,33 @@
+@keyframes line-scale {
+  0% {
+    transform: scaley(1.0);
+  }
+  50% {
+    transform: scaley(0.4);
+  }
+  100% {
+    transform: scaley(1.0);
+  }
+}
+
+@mixin line-scale($n:5) {
+  @for $i from 1 through $n {
+    > span:nth-child(#{$i}) {
+      animation: line-scale 1s ($i * 0.1s) infinite cubic-bezier(.2,.68,.18,1.08);
+    }
+  }
+}
+
+.line-scale {
+  @include line-scale();
+
+  span {
+    display: inline-block;
+    height: 35px;
+    width: 7px;
+    border-radius: 2px;
+    margin: 0 2px;
+    background: red;
+    animation-fill-mode: both;
+  }
+}

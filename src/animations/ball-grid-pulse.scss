@@ -1,0 +1,44 @@
+$size: 20px;
+$margin: 2px;
+
+@keyframes ball-grid-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+}
+
+@mixin ball-grid-pulse($n:9) {
+  @for $i from 1 through $n {
+    > span:nth-child(#{$i}) {
+      animation-delay: ((random(100) / 100) - 0.2) + s;
+      animation-duration: ((random(100) / 100) + 0.6) + s;
+    }
+  }
+
+}
+
+.ball-grid-pulse {
+  @include ball-grid-pulse();
+  width: ($size * 3) + $margin * 6;
+
+  span {
+    display: inline-block;
+    width: $size;
+    height: $size;
+    background: purple;
+    border-radius: 100%;
+    margin: 0 $margin;
+    animation-name: ball-grid-pulse;
+    animation-iteration-count: infinite;
+    animation-delay: 0;
+  }
+}

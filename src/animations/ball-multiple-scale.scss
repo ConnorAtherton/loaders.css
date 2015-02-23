@@ -1,0 +1,27 @@
+$size: 20px;
+
+@keyframes ball-multiple-scale {
+  0% {
+    transform: scale(0.0);
+  }
+  100% {
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+.ball-multiple-scale {
+  position: relative;
+
+  span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    height: $size;
+    width: $size;
+    border-radius: 100%;
+    background-color: blue;
+    animation: ball-multiple-scale 1s 0 linear 5;
+  }
+}
