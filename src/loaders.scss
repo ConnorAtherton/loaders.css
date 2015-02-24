@@ -10,10 +10,15 @@
  * Dots
  */
 @import 'animations/ball-pulse';
+@import 'animations/ball-pulse-sync';
 @import 'animations/ball-scale';
-@import 'animations/ball-multiple-scale';
+@import 'animations/ball-scale-ripple';
+@import 'animations/ball-scale-ripple-multiple';
+@import 'animations/ball-beat';
+@import 'animations/ball-scale-multiple';
 @import 'animations/ball-triangle-trace';
 @import 'animations/ball-pulse-rise';
+@import 'animations/ball-grid-beat';
 @import 'animations/ball-grid-pulse';
 // @import 'animations/shift';
 
@@ -21,6 +26,8 @@
  * Lines
  */
 @import 'animations/line-scale';
-@import 'animations/line-scale-party';
+@import 'animations/line-scale-random';
+@import 'animations/line-scale-pulse-out';
+@import 'animations/line-scale-pulse-out-rapid';
 // @import 'animations/shuffle';
 // @import 'animations/bounce';

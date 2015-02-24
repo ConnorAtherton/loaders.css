@@ -1,0 +1,32 @@
+$size: 20px;
+$margin: 2px;
+
+@keyframes ball-beat {
+  50% {
+    opacity: 0.2;
+    transform: scale(0.75);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+.ball-beat {
+  width: ($size * 3) + $margin * 6;
+
+  span {
+    display: inline-block;
+    width: $size;
+    height: $size;
+    background: cyan;
+    border-radius: 100%;
+    margin: 0 $margin;
+    animation: ball-beat 0.7s 0 infinite linear;
+
+    &:nth-child(2n-1) {
+      animation-delay: 0.35s !important;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@keyframes ball-scale-ripple-multiple {
+  0% {
+    transform: scale(0.0);
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0.0;
+  }
+}
+
+@mixin ball-scale-ripple-multiple ($n:3, $start:0) {
+  @for $i from $start through $n {
+    > span:nth-child(#{$i}) {
+      animation-delay: ($i* 0.2) + s;
+    }
+  }
+}
+
+.ball-scale-ripple-multiple {
+  @include ball-scale-ripple-multiple();
+  position: relative;
+
+  span {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    border: 2px solid orange;
+
+    animation: ball-scale-ripple-multiple 1s 0 infinite cubic-bezier(.21,.53,.56,.8);
+  }
+}

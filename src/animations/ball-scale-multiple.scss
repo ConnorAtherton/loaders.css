@@ -1,0 +1,36 @@
+$size: 50px;
+
+@keyframes ball-scale-multiple {
+  0% {
+    transform: scale(0.0);
+  }
+  100% {
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@mixin ball-scale-multiple ($n:3, $start:0) {
+  @for $i from 2 through $n {
+    > span:nth-child(#{$i}) {
+      animation-delay: ($i* 0.2) + s;
+    }
+  }
+}
+
+.ball-scale-multiple {
+  @include ball-scale-multiple();
+  position: relative;
+
+  span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    height: $size;
+    width: $size;
+    border-radius: 100%;
+    background-color: blue;
+    animation: ball-scale-multiple 1s 0 linear infinite;
+  }
+}
