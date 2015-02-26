@@ -1,0 +1,67 @@
+$radius: 20px;
+
+@keyframes line-spin-fade-loader {
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin line-spin-fade-loader($n:8, $start:1) {
+  @for $i from $start through $n {
+    > span:nth-child(#{$i}) {
+      $iter: 360 / $n;
+      $quarter: ($radius / 2) + ($radius / 5.5);
+
+      @if $i == 1 {
+        top: $radius;
+        left: 0;
+      } @else if $i == 2 {
+        top: $quarter;
+        left: $quarter;
+        transform: rotate(-45deg);
+      } @else if $i == 3 {
+        top: 0;
+        left: $radius;
+        transform: rotate(90deg);
+      } @else if $i == 4 {
+        top: -$quarter;
+        left: $quarter;
+        transform: rotate(45deg);
+      } @else if $i == 5 {
+        top: -$radius;
+        left: 0;
+      } @else if $i == 6 {
+        top: -$quarter;
+        left: -$quarter;
+        transform: rotate(-45deg);
+      } @else if $i == 7 {
+        top: 0;
+        left: -$radius;
+        transform: rotate(90deg);
+      } @else if $i == 8 {
+        top: $quarter;
+        left: -$quarter;
+        transform: rotate(45deg);
+      }
+
+      animation: line-spin-fade-loader 1.2s ($i * 0.12s) infinite ease-in-out;
+    }
+  }
+}
+
+.line-spin-fade-loader {
+  @include line-spin-fade-loader();
+  position: relative;
+
+  span {
+    position: absolute;
+    display: inline-block;
+    width: 5px;
+    height: 15px;
+    border-radius: 3px;
+    background: green;
+  }
+}

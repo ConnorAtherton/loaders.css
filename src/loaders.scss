@@ -21,6 +21,8 @@
 @import 'animations/ball-pulse-rise';
 @import 'animations/ball-grid-beat';
 @import 'animations/ball-grid-pulse';
+@import 'animations/ball-spin-fade-loader';
+@import 'animations/ball-spin-loader';
 // @import 'animations/shift';
 
 /**
@@ -30,5 +32,11 @@
 @import 'animations/line-scale-random';
 @import 'animations/line-scale-pulse-out';
 @import 'animations/line-scale-pulse-out-rapid';
+@import 'animations/line-spin-fade-loader';
 // @import 'animations/shuffle';
 // @import 'animations/bounce';
+
+/**
+ * Misc
+ */
+@import 'animations/ping-pong.scss';
