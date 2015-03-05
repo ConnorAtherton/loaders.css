@@ -1,0 +1,55 @@
+$primary-color: #2a5d84;
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.6);
+  }
+  100% {
+   transform: rotate(360deg) scale(1);
+ }
+}
+
+@keyframes scale {
+  30% {
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.ball-clip-rotate-pulse {
+  position: relative;
+
+  > span {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 100%;
+    display: inline-block;
+
+    &:first-child {
+      background: blue;
+      height: 20px;
+      width: 20px;
+      top: 7px;
+      left: 7px;
+      animation: scale 1s 0 cubic-bezier(.09,.57,.49,.9) infinite;
+    }
+
+    &:last-child {
+      position: absolute;
+      width: 30px;
+      border: 2px solid red;
+      height: 30px;
+      background: transparent;
+      border: 2px solid;
+      border-color: red transparent red transparent;
+      animation: rotate 1s 0 cubic-bezier(.09,.57,.49,.9) infinite;
+      animation-duration: 1s;
+    }
+  }
+}

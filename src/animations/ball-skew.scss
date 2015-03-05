@@ -1,0 +1,24 @@
+@keyframes ball-skew {
+  25% {
+    transform: perspective(100px) rotateX(180deg) rotateY(0);
+  }
+  50% {
+    transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+  }
+  75% {
+    transform: perspective(100px) rotateX(0) rotateY(180deg);
+  }
+  100% {
+    transform: perspective(100px) rotateX(0) rotateY(0);
+  }
+}
+
+.ball-skew {
+  > span {
+    width: 40px;
+    height: 40px;
+    border: 1px solid red;
+    display: inline-block;
+    animation: ball-skew 3s 0 cubic-bezier(.09,.57,.49,.9) infinite;
+  }
+}

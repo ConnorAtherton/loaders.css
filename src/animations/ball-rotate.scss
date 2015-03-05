@@ -1,0 +1,76 @@
+
+$primary-color: #2a5d84;
+
+@keyframes scale {
+  0% {
+    transform: scale(0.0);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(0.9, 0.9);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1,1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+   transform: rotate(360deg);
+ }
+}
+
+.ball-rotate {
+  position: relative;
+
+  > span {
+    background-color: $primary-color;
+    position: relative;
+    height: 17px;
+    width: 17px;
+    border-radius: 100%;
+    display: inline-block;
+    animation-fill-mode: both;
+
+    &:first-child {
+      animation: rotate 1s 0 cubic-bezier(.7,-0.13,.22,.86) infinite;
+    }
+
+    &:before, &:after {
+      opacity: 0.6;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: blue;
+      top: 0px;
+      left: -25px;
+      height: 17px;
+      width: 17px;
+      border-radius: 12px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: blue;
+      top: 0px;
+      left: 25px;
+      height: 17px;
+      width: 17px;
+      border-radius: 12px;
+    }
+  }
+}
