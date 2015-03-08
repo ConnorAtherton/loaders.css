@@ -12,7 +12,7 @@
 
 @mixin line-scale($n:5) {
   @for $i from 1 through $n {
-    > span:nth-child(#{$i}) {
+    > div:nth-child(#{$i}) {
       animation: line-scale 1s ($i * 0.1s) infinite cubic-bezier(.2,.68,.18,1.08);
     }
   }
@@ -21,7 +21,7 @@
 .line-scale {
   @include line-scale();
 
-  span {
+  > div {
     display: inline-block;
     height: 35px;
     width: 7px;

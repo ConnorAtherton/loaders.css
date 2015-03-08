@@ -24,12 +24,11 @@ $primary-color: #2a5d84;
 .ball-clip-rotate-pulse {
   position: relative;
 
-  > span {
+  > div {
     position: absolute;
     top: 0px;
     left: 0px;
     border-radius: 100%;
-    display: inline-block;
 
     &:first-child {
       background: blue;

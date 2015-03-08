@@ -49,7 +49,8 @@ $rise-amount: 30px;
 }
 
 .ball-pulse-rise {
-  span {
+
+  > div {
     display: inline-block;
     width: 15px;
     height: 15px;

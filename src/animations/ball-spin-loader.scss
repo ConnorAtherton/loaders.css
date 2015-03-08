@@ -50,9 +50,8 @@ $radius: 45px;
   @include ball-spin-loader();
   position: relative;
 
-  span {
+  > div {
     position: absolute;
-    display: inline-block;
     width: 15px;
     height: 15px;
     border-radius: 100%;

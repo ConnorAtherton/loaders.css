@@ -7,12 +7,17 @@
 */
 
 /**
+ * Styles shared by multiple animations
+ */
+@import 'colors';
+@import 'mixins';
+
+/**
  * Dots
  */
 @import 'animations/ball-pulse';
 @import 'animations/ball-pulse-sync';
 @import 'animations/ball-scale';
-@import 'animations/ball-spin';
 @import 'animations/ball-rotate';
 @import 'animations/ball-clip-rotate';
 @import 'animations/ball-clip-rotate-pulse';
@@ -46,4 +51,3 @@
 /**
  * Misc
  */
-@import 'animations/ping-pong.scss';

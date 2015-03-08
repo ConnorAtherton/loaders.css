@@ -16,7 +16,7 @@ $margin: 2px;
 .ball-beat {
   width: ($size * 3) + $margin * 6;
 
-  span {
+  div {
     display: inline-block;
     width: $size;
     height: $size;

@@ -13,7 +13,7 @@ $radius: 45px;
 
 @mixin ball-spin-fade-loader($n:8, $start:1) {
   @for $i from $start through $n {
-    > span:nth-child(#{$i}) {
+    > div:nth-child(#{$i}) {
       $iter: 360 / $n;
       $quarter: ($radius / 2) + ($radius / 5.5);
 
@@ -43,7 +43,7 @@ $radius: 45px;
         left: -$quarter;
       }
 
-      animation: ball-spin-fade-loader 1.2s ($i * 0.12s) infinite ease-in-out;
+      animation: ball-spin-fade-loader 1.2s (($i - 1) * 0.12s) infinite ease-in-out;
     }
   }
 }
@@ -52,9 +52,8 @@ $radius: 45px;
   @include ball-spin-fade-loader();
   position: relative;
 
-  span {
+  > div {
     position: absolute;
-    display: inline-block;
     width: 15px;
     height: 15px;
     border-radius: 100%;

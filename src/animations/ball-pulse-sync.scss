@@ -15,7 +15,7 @@ $amount: 10px;
 
 @mixin ball-pulse-sync($n:3, $start:0) {
   @for $i from $start through $n {
-    > span:nth-child(#{$i}) {
+    > div:nth-child(#{$i}) {
       animation: ball-pulse-sync 0.6s ($i * 0.07s) infinite ease-in-out;
     }
   }
@@ -24,12 +24,12 @@ $amount: 10px;
 .ball-pulse-sync {
   @include ball-pulse-sync();
 
-  > span {
+  > div {
+    display: inline-block;
     background-color: $primary-color;
     height: 17px;
     width: 17px;
     border-radius: 100%;
-    display: inline-block;
     margin: 20px 5px;
     animation-fill-mode: both;
   }

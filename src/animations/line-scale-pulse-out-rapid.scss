@@ -12,7 +12,7 @@
 
 .line-scale-pulse-out-rapid {
 
-  span {
+  > div {
     display: inline-block;
     height: 40px;
     width: 5px;
@@ -29,6 +29,5 @@
     &:nth-child(1), &:nth-child(5) {
       animation-delay: 0.5s !important;
     }
-
   }
 }

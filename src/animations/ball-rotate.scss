@@ -34,13 +34,12 @@ $primary-color: #2a5d84;
 .ball-rotate {
   position: relative;
 
-  > span {
+  > div {
     background-color: $primary-color;
     position: relative;
     height: 17px;
     width: 17px;
     border-radius: 100%;
-    display: inline-block;
     animation-fill-mode: both;
 
     &:first-child {

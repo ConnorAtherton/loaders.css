@@ -40,7 +40,7 @@ $amount: 50px;
   $animations: "ball-triangle-path-1" "ball-triangle-path-2" "ball-triangle-path-3";
 
   @for $i from 1 through $n {
-    > span:nth-child(#{$i}) {
+    > div:nth-child(#{$i}) {
       animation-name: nth($animations, $i);
       animation-delay: 0;
       animation-duration: 2s;
@@ -54,9 +54,8 @@ $amount: 50px;
   position: relative;
   @include ball-triangle-path();
 
-  span {
+  > div {
     position: absolute;
-    display: inline-block;
     width: 10px;
     height: 10px;
     border-radius: 100%;

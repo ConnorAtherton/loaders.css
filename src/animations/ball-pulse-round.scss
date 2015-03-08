@@ -8,14 +8,9 @@
   }
 }
 
-@mixin ball_pulse_round() {
-
-}
-
 .ball-pulse-round {
-  @include ball-pulse-round();
 
-  div {
+  > div {
     width: 10px;
     height: 10px;
     animation: ball-pulse-round 1.2s infinite ease-in-out;

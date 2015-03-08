@@ -15,7 +15,7 @@ $primary-color: #2a5d84;
 .ball-clip-rotate-multiple {
   position: relative;
 
-  > span {
+  > div {
     position: absolute;
     left: 75px;
     top: 75px;
@@ -25,7 +25,6 @@ $primary-color: #2a5d84;
     border-radius: 100%;
     height: 25px;
     width: 25px;
-    display: inline-block;
     animation: rotate 1s 0 ease-in-out infinite;
     animation-fill-mode: both;
 

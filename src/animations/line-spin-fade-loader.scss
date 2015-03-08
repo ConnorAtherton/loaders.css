@@ -11,7 +11,7 @@ $radius: 20px;
 
 @mixin line-spin-fade-loader($n:8, $start:1) {
   @for $i from $start through $n {
-    > span:nth-child(#{$i}) {
+    > div:nth-child(#{$i}) {
       $iter: 360 / $n;
       $quarter: ($radius / 2) + ($radius / 5.5);
 
@@ -56,9 +56,8 @@ $radius: 20px;
   @include line-spin-fade-loader();
   position: relative;
 
-  span {
+  > div {
     position: absolute;
-    display: inline-block;
     width: 5px;
     height: 15px;
     border-radius: 3px;

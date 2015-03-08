@@ -13,13 +13,12 @@
 }
 
 .ball-scale-ripple {
-  span {
-    display: inline-block;
+
+  > div {
     height: 50px;
     width: 50px;
     border-radius: 100%;
     border: 2px solid orange;
-
     animation: ball-scale-ripple 1s 0 infinite cubic-bezier(.21,.53,.56,.8);
   }
 }

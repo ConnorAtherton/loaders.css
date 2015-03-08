@@ -2,28 +2,24 @@ $primary-color: #2a5d84;
 
 @keyframes scale {
   0% {
-    transform: scale(0.0);
+    transform: scale(1);
     opacity: 1;
   }
-  25% {
-    transform: scale(0.9, 0.9);
+  45% {
+    transform: scale(0.1);
     opacity: 0.7;
   }
-  50% {
-    transform: scale(1,1);
+  80% {
+    transform: scale(1);
     opacity: 1;
-  }
-  100% {
-    transform: scale(0.1);
   }
 }
 
 // mixins should be separated out
 @mixin ball-pulse($n:3, $start:0) {
   @for $i from $start through $n {
-    > span:nth-child(#{$i}) {
-      border-radius: 30px;
-      animation: scale 0.75s ($i * 0.1s) infinite cubic-bezier(.2,.68,.18,1.08);
+    > div:nth-child(#{$i}) {
+      animation: scale 1s ($i * 0.1s) infinite cubic-bezier(.2,.68,.18,1.08);
     }
   }
 }
@@ -31,10 +27,12 @@ $primary-color: #2a5d84;
 .ball-pulse {
   @include ball-pulse();
 
-  > span {
+  > div {
+    display: inline-block;
     background-color: $primary-color;
     height: 17px;
     width: 17px;
+    border-radius: 100%;
     display: inline-block;
     margin: 20px 5px;
     animation-fill-mode: both;

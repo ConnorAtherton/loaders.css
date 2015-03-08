@@ -22,11 +22,10 @@ $size: 50px;
   @include ball-scale-multiple();
   position: relative;
 
-  span {
+  > div {
     position: absolute;
     left: 0;
     top: 0;
-    display: inline-block;
     height: $size;
     width: $size;
     border-radius: 100%;

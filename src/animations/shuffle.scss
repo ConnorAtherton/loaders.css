@@ -2,7 +2,6 @@
   0% {
     transform: skewX(0deg);
   }
-
   35% {
     transform: skewX(-20deg);
   }
@@ -17,15 +16,9 @@
   }
 }
 
-@mixin shuffle() {
-
-}
-
 .shuffle {
-  @include shuffle();
 
-  > span {
-    display:inline-block;
+  > div {
     height: 30px;
     border-radius: 2px;
     width: 4px;

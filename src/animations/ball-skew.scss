@@ -14,11 +14,11 @@
 }
 
 .ball-skew {
+
   > span {
     width: 40px;
     height: 40px;
     border: 1px solid red;
-    display: inline-block;
     animation: ball-skew 3s 0 cubic-bezier(.09,.57,.49,.9) infinite;
   }
 }

@@ -14,7 +14,7 @@
 
 @mixin ball-scale-ripple-multiple ($n:3, $start:0) {
   @for $i from $start through $n {
-    > span:nth-child(#{$i}) {
+    > div:nth-child(#{$i}) {
       animation-delay: ($i* 0.2) + s;
     }
   }
@@ -24,8 +24,7 @@
   @include ball-scale-ripple-multiple();
   position: relative;
 
-  span {
-    display: inline-block;
+  > div {
     position: absolute;
     top: 0;
     left: 0;
