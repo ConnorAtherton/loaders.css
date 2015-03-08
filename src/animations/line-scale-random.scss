@@ -1,6 +1,5 @@
-$height: 30px;
-$width: 7px;
-$margin: 2px;
+@import '../variables';
+@import '../mixins';
 
 @keyframes line-scale-party {
   0% {
@@ -28,12 +27,9 @@ $margin: 2px;
   @include line-scale-party();
 
   > div {
+    @include lines();
+
     display: inline-block;
-    width: $width;
-    height: $height;
-    background: purple;
-    border-radius: $margin;
-    margin: 0 $margin;
     animation-name: line-scale-party;
     animation-iteration-count: infinite;
     animation-delay: 0;

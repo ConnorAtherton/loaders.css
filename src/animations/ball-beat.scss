@@ -1,5 +1,5 @@
-$size: 20px;
-$margin: 2px;
+@import '../variables';
+@import '../mixins';
 
 @keyframes ball-beat {
   50% {
@@ -14,15 +14,11 @@ $margin: 2px;
 }
 
 .ball-beat {
-  width: ($size * 3) + $margin * 6;
 
-  div {
+  > div {
+    @include balls();
+
     display: inline-block;
-    width: $size;
-    height: $size;
-    background: cyan;
-    border-radius: 100%;
-    margin: 0 $margin;
     animation: ball-beat 0.7s 0 infinite linear;
 
     &:nth-child(2n-1) {

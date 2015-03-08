@@ -1,3 +1,6 @@
+@import '../variables';
+@import '../mixins';
+
 @keyframes line-scale {
   0% {
     transform: scaley(1.0);
@@ -22,12 +25,9 @@
   @include line-scale();
 
   > div {
+    @include lines();
+
     display: inline-block;
-    height: 35px;
-    width: 7px;
-    border-radius: 2px;
-    margin: 0 2px;
-    background: red;
     animation-fill-mode: both;
   }
 }

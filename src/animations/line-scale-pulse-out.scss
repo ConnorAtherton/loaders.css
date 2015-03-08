@@ -1,3 +1,6 @@
+@import '../variables';
+@import '../mixins';
+
 @keyframes line-scale-pulse-out {
   0% {
     transform: scaley(1.0);
@@ -13,12 +16,9 @@
 .line-scale-pulse-out {
 
   > div {
+    @include lines();
+
     display: inline-block;
-    height: 35px;
-    width: 7px;
-    border-radius: 2px;
-    margin: 0 2px;
-    background: red;
     animation: line-scale-pulse-out 0.9s 0 infinite cubic-bezier(.85,.25,.37,.85);
     animation-fill-mode: both;
 

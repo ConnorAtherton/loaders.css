@@ -1,3 +1,6 @@
+@import '../variables';
+@import '../mixins';
+
 $radius: 20px;
 
 @keyframes line-spin-fade-loader {
@@ -57,10 +60,10 @@ $radius: 20px;
   position: relative;
 
   > div {
+    @include lines();
+
     position: absolute;
     width: 5px;
     height: 15px;
-    border-radius: 3px;
-    background: green;
   }
 }
