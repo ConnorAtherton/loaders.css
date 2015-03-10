@@ -7,7 +7,7 @@ html, body {
   margin: 0;
   height: 100%;
   font-size: 16px;
-  background: cyan; }
+  background: #ed5565; }
 
 #container {
   width: 95%;
@@ -17,8 +17,6 @@ html, body {
     clear: both; }
     #container #loaders .loader-row {
       height: 200px; }
-      #container #loaders .loader-row:not(:last-child) {
-        border-bottom: 1px dashed #dcdcdc; }
     #container #loaders .loader {
       width: 200px;
       height: 200px;

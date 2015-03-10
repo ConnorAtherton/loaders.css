@@ -1,4 +1,6 @@
-$primary-color: #2a5d84;
+@import '../variables';
+@import '../mixins';
+
 $amount: 10px;
 
 @keyframes ball-pulse-sync {
@@ -25,12 +27,9 @@ $amount: 10px;
   @include ball-pulse-sync();
 
   > div {
+    @include balls();
+
     display: inline-block;
-    background-color: $primary-color;
-    height: 17px;
-    width: 17px;
-    border-radius: 100%;
-    margin: 20px 5px;
     animation-fill-mode: both;
   }
 }

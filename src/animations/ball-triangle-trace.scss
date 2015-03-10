@@ -1,3 +1,5 @@
+@import '../variables';
+
 $amount: 50px;
 
 @keyframes ball-triangle-path-1 {
@@ -59,7 +61,7 @@ $amount: 50px;
     width: 10px;
     height: 10px;
     border-radius: 100%;
-    border: 1px solid red;
+    border: 1px solid $primary-color;
 
     &:nth-of-type(1) {
       top: $amount;

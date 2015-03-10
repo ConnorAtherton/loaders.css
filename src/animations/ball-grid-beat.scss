@@ -1,5 +1,5 @@
-$size: 20px;
-$margin: 2px;
+@import '../variables';
+@import '../mixins';
 
 @keyframes ball-grid-beat {
   50% {
@@ -8,7 +8,6 @@ $margin: 2px;
   100% {
     opacity: 1;
   }
-
 }
 
 @mixin ball-grid-beat($n:9) {
@@ -23,15 +22,12 @@ $margin: 2px;
 
 .ball-grid-beat {
   @include ball-grid-beat();
-  width: ($size * 3) + $margin * 6;
+  width: ($ball-size * 3) + $margin * 6;
 
   > div {
+    @include balls();
+
     display: inline-block;
-    width: $size;
-    height: $size;
-    background: purple;
-    border-radius: 100%;
-    margin: 0 $margin;
     animation-name: ball-grid-beat;
     animation-iteration-count: infinite;
     animation-delay: 0;

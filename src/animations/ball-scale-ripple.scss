@@ -1,3 +1,5 @@
+@import '../variables';
+
 @keyframes ball-scale-ripple {
   0% {
     transform: scale(0.0);
@@ -18,7 +20,7 @@
     height: 50px;
     width: 50px;
     border-radius: 100%;
-    border: 2px solid orange;
+    border: 2px solid $primary-color;;
     animation: ball-scale-ripple 1s 0 infinite cubic-bezier(.21,.53,.56,.8);
   }
 }

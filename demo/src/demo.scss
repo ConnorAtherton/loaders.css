@@ -9,7 +9,7 @@ html, body {
   margin: 0;
   height: 100%;
   font-size: 16px;
-  background: cyan;
+  background: #ed5565;
 }
 
 #container {
@@ -22,10 +22,6 @@ html, body {
 
     .loader-row {
       height: 200px;
-
-      &:not(:last-child) {
-        border-bottom: 1px dashed $gray;
-      }
     }
 
     .loader {

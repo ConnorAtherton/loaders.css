@@ -1,4 +1,7 @@
-$radius: 45px;
+@import '../variables';
+@import '../mixins';
+
+$radius: 25px;
 
 @keyframes ball-spin-fade-loader {
   50% {
@@ -43,7 +46,7 @@ $radius: 45px;
         left: -$quarter;
       }
 
-      animation: ball-spin-fade-loader 1.2s (($i - 1) * 0.12s) infinite ease-in-out;
+      animation: ball-spin-fade-loader 1s (($i - 1) * 0.12s) infinite linear;
     }
   }
 }
@@ -53,10 +56,8 @@ $radius: 45px;
   position: relative;
 
   > div {
+    @include balls();
+
     position: absolute;
-    width: 15px;
-    height: 15px;
-    border-radius: 100%;
-    background: green;
   }
 }

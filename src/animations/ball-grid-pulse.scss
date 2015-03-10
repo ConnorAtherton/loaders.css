@@ -1,19 +1,18 @@
-$size: 20px;
-$margin: 2px;
+@import '../variables';
+@import '../mixins';
 
 @keyframes ball-grid-pulse {
   0% {
     transform: scale(1);
   }
   50% {
-    transform: scale(0.7);
+    transform: scale(0.5);
     opacity: 0.7;
   }
   100% {
     transform: scale(1);
     opacity: 1;
   }
-
 }
 
 @mixin ball-grid-pulse($n:9) {
@@ -28,15 +27,12 @@ $margin: 2px;
 
 .ball-grid-pulse {
   @include ball-grid-pulse();
-  width: ($size * 3) + $margin * 6;
+  width: ($ball-size * 3) + $margin * 6;
 
   > div {
+    @include balls();
+
     display: inline-block;
-    width: $size;
-    height: $size;
-    background: purple;
-    border-radius: 100%;
-    margin: 0 $margin;
     animation-name: ball-grid-pulse;
     animation-iteration-count: infinite;
     animation-delay: 0;

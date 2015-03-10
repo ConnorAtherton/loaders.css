@@ -1,5 +1,7 @@
-$primary-color: #2a5d84;
-$amount: 50px;
+@import '../variables';
+@import '../mixins';
+
+$amount: 30px;
 
 @keyframes ball-zig-deflect {
   17% {
@@ -47,12 +49,9 @@ $amount: 50px;
   position: relative;
 
   > div {
+    @include balls();
+
     position: absolute;
-    background-color: $primary-color;
-    height: 17px;
-    width: 17px;
-    margin: 20px 5px;
-    border-radius: 100%;
     animation-fill-mode: both;
     margin-left: $amount / 2;
     top: $amount;

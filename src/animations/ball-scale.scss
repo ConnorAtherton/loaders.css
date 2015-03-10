@@ -1,3 +1,6 @@
+@import '../variables';
+@import '../mixins';
+
 @keyframes ball-scale {
   0% {
     transform: scale(0.0);
@@ -11,12 +14,11 @@
 .ball-scale {
 
   > div {
-    display: inline-block;
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-    background-color: blue;
+    @include balls();
 
+    display: inline-block;
+    height: 60px;
+    width: 60px;
     animation: ball-scale 1s 0 ease-in-out infinite;
   }
 }

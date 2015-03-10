@@ -18,8 +18,8 @@
 
   > div {
     position: absolute;
-    left: 75px;
-    top: 75px;
+    left: 70px;
+    top: 70px;
     border: 2px solid $primary-color;
     border-bottom-color: transparent;
     border-top-color: transparent;
@@ -31,10 +31,10 @@
 
     &:last-child {
       display: inline-block;
-      top: 83px;
-      left: 83px;
-      width: 20px;
-      height: 20px;
+      top: 80px;
+      left: 80px;
+      width: 15px;
+      height: 15px;
       animation-duration: 0.5s;
       border-color: $primary-color transparent $primary-color transparent;
       animation-direction: reverse;

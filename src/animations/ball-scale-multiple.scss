@@ -1,3 +1,6 @@
+@import '../variables';
+@import '../mixins';
+
 $size: 50px;
 
 @keyframes ball-scale-multiple {
@@ -12,8 +15,8 @@ $size: 50px;
 
 @mixin ball-scale-multiple ($n:3, $start:0) {
   @for $i from 2 through $n {
-    > span:nth-child(#{$i}) {
-      animation-delay: ($i* 0.2) + s;
+    > div:nth-child(#{$i}) {
+      animation-delay: ($i * 0.2) + s;
     }
   }
 }
@@ -23,13 +26,13 @@ $size: 50px;
   position: relative;
 
   > div {
+    @include balls();
+
     position: absolute;
     left: 0;
     top: 0;
-    height: $size;
     width: $size;
-    border-radius: 100%;
-    background-color: blue;
+    height: $size;
     animation: ball-scale-multiple 1s 0 linear infinite;
   }
 }
