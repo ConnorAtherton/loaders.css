@@ -1,4 +1,5 @@
 @import '../variables';
+@import '../mixins';
 
 $amount: 50px;
 
@@ -57,6 +58,8 @@ $amount: 50px;
   @include ball-triangle-path();
 
   > div {
+    @include global-animation();
+
     position: absolute;
     width: 10px;
     height: 10px;

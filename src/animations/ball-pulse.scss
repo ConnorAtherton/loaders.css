@@ -30,8 +30,8 @@
 
   > div {
     @include balls();
+    @include global-animation();
 
     display: inline-block;
-    animation-fill-mode: both;
   }
 }

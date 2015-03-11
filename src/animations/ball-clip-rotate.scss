@@ -17,6 +17,7 @@
 
   > div {
     @include balls();
+    @include global-animation();
 
     border: 2px solid $primary-color;
     border-bottom-color: transparent;
@@ -25,6 +26,5 @@
     background: transparent !important;
     display: inline-block;
     animation: rotate 0.75s 0 linear infinite;
-    animation-fill-mode: both;
   }
 }

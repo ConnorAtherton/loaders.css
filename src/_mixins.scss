@@ -2,6 +2,10 @@
   background-color: $primary-color;
 }
 
+@mixin global-animation() {
+  animation-fill-mode: both;
+}
+
 @mixin balls() {
   @include global-bg();
 

@@ -17,6 +17,7 @@
 
   > div {
     @include balls();
+    @include global-animation();
 
     display: inline-block;
     animation: ball-beat 0.7s 0 infinite linear;

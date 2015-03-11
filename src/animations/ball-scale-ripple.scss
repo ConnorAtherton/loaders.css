@@ -1,15 +1,16 @@
 @import '../variables';
+@import '../mixins';
 
 @keyframes ball-scale-ripple {
   0% {
-    transform: scale(0.0);
+    transform: scale(0.1);
     opacity: 1;
   }
-  60% {
+  70% {
+    transform: scale(1);
     opacity: 0.7;
   }
   100% {
-    transform: scale(1.1);
     opacity: 0.0;
   }
 }
@@ -17,6 +18,8 @@
 .ball-scale-ripple {
 
   > div {
+    @include global-animation();
+
     height: 50px;
     width: 50px;
     border-radius: 100%;

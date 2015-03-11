@@ -1,3 +1,6 @@
+@import '../variables';
+@import '../mixins';
+
 $radius: 45px;
 
 @keyframes ball-spin-loader {
@@ -51,6 +54,8 @@ $radius: 45px;
   position: relative;
 
   > div {
+    @include global-animation();
+
     position: absolute;
     width: 15px;
     height: 15px;

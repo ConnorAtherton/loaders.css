@@ -26,6 +26,7 @@
 
   > div {
     @include balls();
+    @include global-animation();
 
     display: inline-block;
     animation-name: ball-grid-beat;

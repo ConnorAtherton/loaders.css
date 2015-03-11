@@ -61,6 +61,7 @@ $radius: 20px;
 
   > div {
     @include lines();
+    @include global-animation();
 
     position: absolute;
     width: 5px;

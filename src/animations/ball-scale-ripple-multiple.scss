@@ -1,4 +1,7 @@
 @import '../variables';
+@import '../mixins';
+
+$size: 50px;
 
 @keyframes ball-scale-ripple-multiple {
   0% {
@@ -24,14 +27,18 @@
 
 .ball-scale-ripple-multiple {
   @include ball-scale-ripple-multiple();
+
   position: relative;
+  transform: translateY(-$size / 2);
 
   > div {
+    @include global-animation();
+
     position: absolute;
     top: 0;
     left: 0;
-    height: 50px;
-    width: 50px;
+    width: $size;
+    height: $size;
     border-radius: 100%;
     border: 2px solid $primary-color;
     animation: ball-scale-ripple-multiple 1.25s 0 infinite cubic-bezier(.21,.53,.56,.8);

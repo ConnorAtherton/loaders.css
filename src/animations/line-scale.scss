@@ -26,8 +26,8 @@
 
   > div {
     @include lines();
+    @include global-animation();
 
     display: inline-block;
-    animation-fill-mode: both;
   }
 }

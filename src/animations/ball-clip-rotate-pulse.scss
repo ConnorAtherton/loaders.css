@@ -24,8 +24,11 @@
 
 .ball-clip-rotate-pulse {
   position: relative;
+  transform: translateY(-15px);
 
   > div {
+    @include global-animation();
+
     position: absolute;
     top: 0px;
     left: 0px;

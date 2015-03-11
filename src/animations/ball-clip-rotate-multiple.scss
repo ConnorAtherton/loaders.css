@@ -17,9 +17,11 @@
   position: relative;
 
   > div {
+    @include global-animation();
+
     position: absolute;
-    left: 70px;
-    top: 70px;
+    left: 0px;
+    top: 0px;
     border: 2px solid $primary-color;
     border-bottom-color: transparent;
     border-top-color: transparent;
@@ -27,12 +29,11 @@
     height: 35px;
     width: 35px;
     animation: rotate 1s 0 ease-in-out infinite;
-    animation-fill-mode: both;
 
     &:last-child {
       display: inline-block;
-      top: 80px;
-      left: 80px;
+      top: 10px;
+      left: 10px;
       width: 15px;
       height: 15px;
       animation-duration: 0.5s;

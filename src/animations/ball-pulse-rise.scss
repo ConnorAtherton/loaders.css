@@ -1,5 +1,6 @@
 @import '../variables';
 @import '../mixins';
+
 $rise-amount: 30px;
 
 @keyframes ball-pulse-rise-even {
@@ -44,9 +45,9 @@ $rise-amount: 30px;
 
   > div {
     @include balls();
+    @include global-animation();
 
     display: inline-block;
-    animation-fill-mode: both;
     animation-duration: 1s;
     animation-timing-function: cubic-bezier(.15,.46,.9,.6);
     animation-iteration-count: infinite;

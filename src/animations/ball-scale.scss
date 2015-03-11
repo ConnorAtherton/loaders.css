@@ -15,6 +15,7 @@
 
   > div {
     @include balls();
+    @include global-animation();
 
     display: inline-block;
     height: 60px;
