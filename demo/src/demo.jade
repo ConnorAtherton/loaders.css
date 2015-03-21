@@ -1,13 +1,21 @@
-
+doctype html5
 head
+  // link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:600,300' rel='stylesheet' type='text/css')
   link(rel="stylesheet", type="text/css", href="demo.css")
   link(rel="stylesheet", type="text/css", href="../loaders.css")
 body
-  #container
-    h1 Loaders.css
-    h2 sub title with explanation
+  main
+    header
+      .left
+        h1 Loaders
+          span .css
+        h2 Delightful and performant css loading animations.
 
-    #loaders
+      .right
+        a.btn.right(href="https://github.com/ConnorAtherton/loaders.css")
+          | View on Github
+
+    .loaders
       .loader
         .loader-inner.ball-pulse
           div
@@ -28,7 +36,7 @@ body
           div
 
       .loader
-        .loader-inner.ball-skew
+        .loader-inner.square-spin
           div
 
       .loader
@@ -168,9 +176,20 @@ body
           div
           div
           div
+
       .loader
-        .loader-inner.ping-pong
+        .loader-inner.triangle-skew-spin
+          div
+
+      .loader
+        .loader-inner.pacman
+          div
+          div
           div
           div
           div
 
+  script.
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelector('main').className += 'loaded';
+    });

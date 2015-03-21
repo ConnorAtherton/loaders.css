@@ -25,7 +25,6 @@
 @import 'animations/ball-scale-ripple';
 @import 'animations/ball-scale-ripple-multiple';
 @import 'animations/ball-beat';
-@import 'animations/ball-skew';
 @import 'animations/ball-scale-multiple';
 @import 'animations/ball-triangle-trace';
 @import 'animations/ball-pulse-rise';
@@ -35,7 +34,6 @@
 @import 'animations/ball-spin-loader';
 @import 'animations/ball-zig-zag';
 @import 'animations/ball-zig-zag-deflect';
-// @import 'animations/shift';
 
 /**
  * Lines
@@ -45,9 +43,10 @@
 @import 'animations/line-scale-pulse-out';
 @import 'animations/line-scale-pulse-out-rapid';
 @import 'animations/line-spin-fade-loader';
-// @import 'animations/shuffle';
-// @import 'animations/bounce';
 
 /**
  * Misc
  */
+@import 'animations/triangle-skew-spin';
+@import 'animations/square-spin';
+@import 'animations/pacman';
