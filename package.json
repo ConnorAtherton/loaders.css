@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/ConnorAtherton/loaders.css",
   "devDependencies": {
+    "coffee-script": "^1.9.1",
     "gulp": "^3.8.10",
     "gulp-autoprefixer": "^2.0.0",
     "gulp-cssmin": "^0.1.6",
