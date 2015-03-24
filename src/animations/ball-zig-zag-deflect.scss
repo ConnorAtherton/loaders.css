@@ -47,6 +47,7 @@ $amount: 30px;
 
 .ball-zig-zag-deflect {
   position: relative;
+  transform: translate(-$amount / 2, -$amount / 2);
 
   > div {
     @include balls();
