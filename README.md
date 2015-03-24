@@ -37,3 +37,7 @@ in a browser to see your animation running.
 ### Suggested use
 
 Wrap the surrounding container in `display:flex` and center the animation.
+
+### Licence
+
+MIT
