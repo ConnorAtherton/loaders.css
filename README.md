@@ -1,6 +1,6 @@
 # Loaders.css
 
-Delightful and performant pure css loading animations.
+Delightful and performance-focused pure css loading animations.
 
 ### What is this?
 
