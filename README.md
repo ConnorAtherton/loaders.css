@@ -1,10 +1,10 @@
 # Loaders.css
 
-![Loaders demo](/loaders.gif?raw=true "Loaders demo")
+Delightful and performant pure css loading animations.
 
 ### What is this?
 
-[See the demo](http://htmlpreview.github.io/?https://github.com/ConnorAtherton/loaders.css/blob/master/demo/demo.html)
+[See the demo](http://connoratherton.com/loaders)
 
 A collection of loading animations written entirely in css.
 Each animation is limited to a small subset of css properties in order
