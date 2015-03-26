@@ -59,11 +59,11 @@ $amount: 30px;
     left: $amount;
 
     &:first-child {
-      animation: ball-zig-deflect 1.5s 0 infinite linear;
+      animation: ball-zig-deflect 1.5s 0s infinite linear;
     }
 
     &:last-child {
-      animation: ball-zag-deflect 1.5s 0 infinite linear;
+      animation: ball-zag-deflect 1.5s 0s infinite linear;
     }
   }
 }

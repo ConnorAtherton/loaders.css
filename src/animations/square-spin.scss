@@ -25,6 +25,6 @@
     height: 50px;
     background: $primary-color;
     border: 1px solid red;
-    animation: square-spin 3s 0 cubic-bezier(.09,.57,.49,.9) infinite;
+    animation: square-spin 3s 0s cubic-bezier(.09,.57,.49,.9) infinite;
   }
 }

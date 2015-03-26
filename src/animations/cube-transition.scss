@@ -32,7 +32,7 @@ $size: 10px;
     top: 0;
     left: 0;
     background-color: $primary-color;
-    animation: cube-transition 1.6s 0 infinite ease-in-out;
+    animation: cube-transition 1.6s 0s infinite ease-in-out;
 
     &:last-child {
       animation-delay: -0.8s

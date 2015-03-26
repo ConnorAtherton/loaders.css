@@ -143,8 +143,8 @@
   display: inline-block;
   height: 60px;
   width: 60px;
-  -webkit-animation: ball-scale 1s 0 ease-in-out infinite;
-          animation: ball-scale 1s 0 ease-in-out infinite; }
+  -webkit-animation: ball-scale 1s 0s ease-in-out infinite;
+          animation: ball-scale 1s 0s ease-in-out infinite; }
 
 @-webkit-keyframes rotate {
   0% {
@@ -184,8 +184,8 @@
             animation-fill-mode: both;
     position: relative; }
     .ball-rotate > div:first-child {
-      -webkit-animation: rotate 1s 0 cubic-bezier(.7, -.13, .22, .86) infinite;
-              animation: rotate 1s 0 cubic-bezier(.7, -.13, .22, .86) infinite; }
+      -webkit-animation: rotate 1s 0s cubic-bezier(.7, -.13, .22, .86) infinite;
+              animation: rotate 1s 0s cubic-bezier(.7, -.13, .22, .86) infinite; }
     .ball-rotate > div:before, .ball-rotate > div:after {
       background-color: #fff;
       width: 15px;
@@ -229,8 +229,8 @@
   width: 25px;
   background: transparent !important;
   display: inline-block;
-  -webkit-animation: rotate 0.75s 0 linear infinite;
-          animation: rotate 0.75s 0 linear infinite; }
+  -webkit-animation: rotate 0.75s 0s linear infinite;
+          animation: rotate 0.75s 0s linear infinite; }
 
 @keyframes rotate {
   0% {
@@ -272,8 +272,8 @@
       width: 16px;
       top: 9px;
       left: 9px;
-      -webkit-animation: scale 1s 0 cubic-bezier(.09, .57, .49, .9) infinite;
-              animation: scale 1s 0 cubic-bezier(.09, .57, .49, .9) infinite; }
+      -webkit-animation: scale 1s 0s cubic-bezier(.09, .57, .49, .9) infinite;
+              animation: scale 1s 0s cubic-bezier(.09, .57, .49, .9) infinite; }
     .ball-clip-rotate-pulse > div:last-child {
       position: absolute;
       border: 2px solid #fff;
@@ -282,8 +282,8 @@
       background: transparent;
       border: 2px solid;
       border-color: #fff transparent #fff transparent;
-      -webkit-animation: rotate 1s 0 cubic-bezier(.09, .57, .49, .9) infinite;
-              animation: rotate 1s 0 cubic-bezier(.09, .57, .49, .9) infinite;
+      -webkit-animation: rotate 1s 0s cubic-bezier(.09, .57, .49, .9) infinite;
+              animation: rotate 1s 0s cubic-bezier(.09, .57, .49, .9) infinite;
       -webkit-animation-duration: 1s;
               animation-duration: 1s; }
 
@@ -314,8 +314,8 @@
     border-radius: 100%;
     height: 35px;
     width: 35px;
-    -webkit-animation: rotate 1s 0 ease-in-out infinite;
-            animation: rotate 1s 0 ease-in-out infinite; }
+    -webkit-animation: rotate 1s 0s ease-in-out infinite;
+            animation: rotate 1s 0s ease-in-out infinite; }
     .ball-clip-rotate-multiple > div:last-child {
       display: inline-block;
       top: 10px;
@@ -363,8 +363,8 @@
   width: 50px;
   border-radius: 100%;
   border: 2px solid #fff;
-  -webkit-animation: ball-scale-ripple 1s 0 infinite cubic-bezier(.21, .53, .56, .8);
-          animation: ball-scale-ripple 1s 0 infinite cubic-bezier(.21, .53, .56, .8); }
+  -webkit-animation: ball-scale-ripple 1s 0s infinite cubic-bezier(.21, .53, .56, .8);
+          animation: ball-scale-ripple 1s 0s infinite cubic-bezier(.21, .53, .56, .8); }
 
 @-webkit-keyframes ball-scale-ripple-multiple {
   0% {
@@ -421,8 +421,8 @@
     height: 50px;
     border-radius: 100%;
     border: 2px solid #fff;
-    -webkit-animation: ball-scale-ripple-multiple 1.25s 0 infinite cubic-bezier(.21, .53, .56, .8);
-            animation: ball-scale-ripple-multiple 1.25s 0 infinite cubic-bezier(.21, .53, .56, .8); }
+    -webkit-animation: ball-scale-ripple-multiple 1.25s 0s infinite cubic-bezier(.21, .53, .56, .8);
+            animation: ball-scale-ripple-multiple 1.25s 0s infinite cubic-bezier(.21, .53, .56, .8); }
 
 @-webkit-keyframes ball-beat {
   50% {
@@ -455,8 +455,8 @@
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   display: inline-block;
-  -webkit-animation: ball-beat 0.7s 0 infinite linear;
-          animation: ball-beat 0.7s 0 infinite linear; }
+  -webkit-animation: ball-beat 0.7s 0s infinite linear;
+          animation: ball-beat 0.7s 0s infinite linear; }
   .ball-beat > div:nth-child(2n-1) {
     -webkit-animation-delay: 0.35s !important;
             animation-delay: 0.35s !important; }
@@ -515,8 +515,8 @@
     margin: 0;
     width: 60px;
     height: 60px;
-    -webkit-animation: ball-scale-multiple 1s 0 linear infinite;
-            animation: ball-scale-multiple 1s 0 linear infinite; }
+    -webkit-animation: ball-scale-multiple 1s 0s linear infinite;
+            animation: ball-scale-multiple 1s 0s linear infinite; }
 
 @-webkit-keyframes ball-triangle-path-1 {
   33% {
@@ -783,50 +783,50 @@
 .ball-grid-beat {
   width: 57px; }
   .ball-grid-beat > div:nth-child(1) {
-    -webkit-animation-delay: 0.38s;
-            animation-delay: 0.38s;
-    -webkit-animation-duration: 1.22s;
-            animation-duration: 1.22s; }
+    -webkit-animation-delay: 0.05s;
+            animation-delay: 0.05s;
+    -webkit-animation-duration: 1.52s;
+            animation-duration: 1.52s; }
   .ball-grid-beat > div:nth-child(2) {
-    -webkit-animation-delay: 0.62s;
-            animation-delay: 0.62s;
-    -webkit-animation-duration: 1.48s;
-            animation-duration: 1.48s; }
+    -webkit-animation-delay: 0.54s;
+            animation-delay: 0.54s;
+    -webkit-animation-duration: 1.26s;
+            animation-duration: 1.26s; }
   .ball-grid-beat > div:nth-child(3) {
-    -webkit-animation-delay: 0.09s;
-            animation-delay: 0.09s;
-    -webkit-animation-duration: 1.37s;
-            animation-duration: 1.37s; }
+    -webkit-animation-delay: 0.22s;
+            animation-delay: 0.22s;
+    -webkit-animation-duration: 0.93s;
+            animation-duration: 0.93s; }
   .ball-grid-beat > div:nth-child(4) {
-    -webkit-animation-delay: 0.68s;
-            animation-delay: 0.68s;
-    -webkit-animation-duration: 0.82s;
-            animation-duration: 0.82s; }
-  .ball-grid-beat > div:nth-child(5) {
-    -webkit-animation-delay: 0.59s;
-            animation-delay: 0.59s;
-    -webkit-animation-duration: 0.89s;
-            animation-duration: 0.89s; }
-  .ball-grid-beat > div:nth-child(6) {
     -webkit-animation-delay: 0.44s;
             animation-delay: 0.44s;
-    -webkit-animation-duration: 1.14s;
-            animation-duration: 1.14s; }
+    -webkit-animation-duration: 1.13s;
+            animation-duration: 1.13s; }
+  .ball-grid-beat > div:nth-child(5) {
+    -webkit-animation-delay: 0.52s;
+            animation-delay: 0.52s;
+    -webkit-animation-duration: 0.67s;
+            animation-duration: 0.67s; }
+  .ball-grid-beat > div:nth-child(6) {
+    -webkit-animation-delay: 0.71s;
+            animation-delay: 0.71s;
+    -webkit-animation-duration: 1.56s;
+            animation-duration: 1.56s; }
   .ball-grid-beat > div:nth-child(7) {
-    -webkit-animation-delay: 0.61s;
-            animation-delay: 0.61s;
-    -webkit-animation-duration: 1.32s;
-            animation-duration: 1.32s; }
+    -webkit-animation-delay: 0.44s;
+            animation-delay: 0.44s;
+    -webkit-animation-duration: 1.03s;
+            animation-duration: 1.03s; }
   .ball-grid-beat > div:nth-child(8) {
-    -webkit-animation-delay: -0.04s;
-            animation-delay: -0.04s;
-    -webkit-animation-duration: 0.95s;
-            animation-duration: 0.95s; }
+    -webkit-animation-delay: 0.11s;
+            animation-delay: 0.11s;
+    -webkit-animation-duration: 0.93s;
+            animation-duration: 0.93s; }
   .ball-grid-beat > div:nth-child(9) {
-    -webkit-animation-delay: 0.02s;
-            animation-delay: 0.02s;
-    -webkit-animation-duration: 1.16s;
-            animation-duration: 1.16s; }
+    -webkit-animation-delay: 0.78s;
+            animation-delay: 0.78s;
+    -webkit-animation-duration: 1.09s;
+            animation-duration: 1.09s; }
   .ball-grid-beat > div {
     background-color: #fff;
     width: 15px;
@@ -876,50 +876,50 @@
 .ball-grid-pulse {
   width: 57px; }
   .ball-grid-pulse > div:nth-child(1) {
-    -webkit-animation-delay: 0.3s;
-            animation-delay: 0.3s;
-    -webkit-animation-duration: 0.88s;
-            animation-duration: 0.88s; }
+    -webkit-animation-delay: -0.09s;
+            animation-delay: -0.09s;
+    -webkit-animation-duration: 0.81s;
+            animation-duration: 0.81s; }
   .ball-grid-pulse > div:nth-child(2) {
-    -webkit-animation-delay: 0.77s;
-            animation-delay: 0.77s;
-    -webkit-animation-duration: 0.91s;
-            animation-duration: 0.91s; }
+    -webkit-animation-delay: 0.52s;
+            animation-delay: 0.52s;
+    -webkit-animation-duration: 1.12s;
+            animation-duration: 1.12s; }
   .ball-grid-pulse > div:nth-child(3) {
-    -webkit-animation-delay: -0.07s;
-            animation-delay: -0.07s;
-    -webkit-animation-duration: 0.86s;
-            animation-duration: 0.86s; }
+    -webkit-animation-delay: 0.41s;
+            animation-delay: 0.41s;
+    -webkit-animation-duration: 1.57s;
+            animation-duration: 1.57s; }
   .ball-grid-pulse > div:nth-child(4) {
-    -webkit-animation-delay: 0.26s;
-            animation-delay: 0.26s;
-    -webkit-animation-duration: 1.42s;
-            animation-duration: 1.42s; }
+    -webkit-animation-delay: 0.72s;
+            animation-delay: 0.72s;
+    -webkit-animation-duration: 0.73s;
+            animation-duration: 0.73s; }
   .ball-grid-pulse > div:nth-child(5) {
-    -webkit-animation-delay: 0.23s;
-            animation-delay: 0.23s;
-    -webkit-animation-duration: 1.6s;
-            animation-duration: 1.6s; }
+    -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s;
+    -webkit-animation-duration: 1.45s;
+            animation-duration: 1.45s; }
   .ball-grid-pulse > div:nth-child(6) {
-    -webkit-animation-delay: 0.58s;
-            animation-delay: 0.58s;
-    -webkit-animation-duration: 1.17s;
-            animation-duration: 1.17s; }
-  .ball-grid-pulse > div:nth-child(7) {
-    -webkit-animation-delay: 0.8s;
-            animation-delay: 0.8s;
+    -webkit-animation-delay: 0.31s;
+            animation-delay: 0.31s;
     -webkit-animation-duration: 0.86s;
             animation-duration: 0.86s; }
+  .ball-grid-pulse > div:nth-child(7) {
+    -webkit-animation-delay: 0.43s;
+            animation-delay: 0.43s;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s; }
   .ball-grid-pulse > div:nth-child(8) {
-    -webkit-animation-delay: 0.44s;
-            animation-delay: 0.44s;
-    -webkit-animation-duration: 1.37s;
-            animation-duration: 1.37s; }
-  .ball-grid-pulse > div:nth-child(9) {
-    -webkit-animation-delay: -0.11s;
-            animation-delay: -0.11s;
+    -webkit-animation-delay: 0.18s;
+            animation-delay: 0.18s;
     -webkit-animation-duration: 1.35s;
             animation-duration: 1.35s; }
+  .ball-grid-pulse > div:nth-child(9) {
+    -webkit-animation-delay: 0.57s;
+            animation-delay: 0.57s;
+    -webkit-animation-duration: 1.4s;
+            animation-duration: 1.4s; }
   .ball-grid-pulse > div {
     background-color: #fff;
     width: 15px;
@@ -1145,11 +1145,11 @@
     top: 30px;
     left: 30px; }
     .ball-zig-zag > div:first-child {
-      -webkit-animation: ball-zig 0.7s 0 infinite linear;
-              animation: ball-zig 0.7s 0 infinite linear; }
+      -webkit-animation: ball-zig 0.7s 0s infinite linear;
+              animation: ball-zig 0.7s 0s infinite linear; }
     .ball-zig-zag > div:last-child {
-      -webkit-animation: ball-zag 0.7s 0 infinite linear;
-              animation: ball-zag 0.7s 0 infinite linear; }
+      -webkit-animation: ball-zag 0.7s 0s infinite linear;
+              animation: ball-zag 0.7s 0s infinite linear; }
 
 @-webkit-keyframes ball-zig-deflect {
   17% {
@@ -1269,11 +1269,11 @@
     top: 30px;
     left: 30px; }
     .ball-zig-zag-deflect > div:first-child {
-      -webkit-animation: ball-zig-deflect 1.5s 0 infinite linear;
-              animation: ball-zig-deflect 1.5s 0 infinite linear; }
+      -webkit-animation: ball-zig-deflect 1.5s 0s infinite linear;
+              animation: ball-zig-deflect 1.5s 0s infinite linear; }
     .ball-zig-zag-deflect > div:last-child {
-      -webkit-animation: ball-zag-deflect 1.5s 0 infinite linear;
-              animation: ball-zag-deflect 1.5s 0 infinite linear; }
+      -webkit-animation: ball-zag-deflect 1.5s 0s infinite linear;
+              animation: ball-zag-deflect 1.5s 0s infinite linear; }
 
 /**
  * Lines
@@ -1355,25 +1355,25 @@
             transform: scale(1); } }
 
 .line-scale-party > div:nth-child(1) {
-  -webkit-animation-delay: 0.03s;
-          animation-delay: 0.03s;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s; }
+  -webkit-animation-delay: 0.39s;
+          animation-delay: 0.39s;
+  -webkit-animation-duration: 0.35s;
+          animation-duration: 0.35s; }
 .line-scale-party > div:nth-child(2) {
-  -webkit-animation-delay: -0.13s;
-          animation-delay: -0.13s;
-  -webkit-animation-duration: 0.82s;
-          animation-duration: 0.82s; }
+  -webkit-animation-delay: 0.01s;
+          animation-delay: 0.01s;
+  -webkit-animation-duration: 0.53s;
+          animation-duration: 0.53s; }
 .line-scale-party > div:nth-child(3) {
-  -webkit-animation-delay: -0.02s;
-          animation-delay: -0.02s;
-  -webkit-animation-duration: 0.78s;
-          animation-duration: 0.78s; }
+  -webkit-animation-delay: 0.23s;
+          animation-delay: 0.23s;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s; }
 .line-scale-party > div:nth-child(4) {
-  -webkit-animation-delay: 0.66s;
-          animation-delay: 0.66s;
-  -webkit-animation-duration: 0.78s;
-          animation-duration: 0.78s; }
+  -webkit-animation-delay: 0.67s;
+          animation-delay: 0.67s;
+  -webkit-animation-duration: 0.44s;
+          animation-duration: 0.44s; }
 .line-scale-party > div {
   background-color: #fff;
   width: 4px;
@@ -1425,8 +1425,8 @@
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   display: inline-block;
-  -webkit-animation: line-scale-pulse-out 0.9s 0 infinite cubic-bezier(.85, .25, .37, .85);
-          animation: line-scale-pulse-out 0.9s 0 infinite cubic-bezier(.85, .25, .37, .85); }
+  -webkit-animation: line-scale-pulse-out 0.9s 0s infinite cubic-bezier(.85, .25, .37, .85);
+          animation: line-scale-pulse-out 0.9s 0s infinite cubic-bezier(.85, .25, .37, .85); }
   .line-scale-pulse-out > div:nth-child(2), .line-scale-pulse-out > div:nth-child(4) {
     -webkit-animation-delay: 0.2s !important;
             animation-delay: 0.2s !important; }
@@ -1469,8 +1469,8 @@
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   display: inline-block;
-  -webkit-animation: line-scale-pulse-out-rapid 0.9s 0 infinite cubic-bezier(.11, .49, .38, .78);
-          animation: line-scale-pulse-out-rapid 0.9s 0 infinite cubic-bezier(.11, .49, .38, .78); }
+  -webkit-animation: line-scale-pulse-out-rapid 0.9s 0s infinite cubic-bezier(.11, .49, .38, .78);
+          animation: line-scale-pulse-out-rapid 0.9s 0s infinite cubic-bezier(.11, .49, .38, .78); }
   .line-scale-pulse-out-rapid > div:nth-child(2), .line-scale-pulse-out-rapid > div:nth-child(4) {
     -webkit-animation-delay: 0.25s !important;
             animation-delay: 0.25s !important; }
@@ -1608,8 +1608,8 @@
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   border-bottom: 20px solid #fff;
-  -webkit-animation: triangle-skew-spin 3s 0 cubic-bezier(.09, .57, .49, .9) infinite;
-          animation: triangle-skew-spin 3s 0 cubic-bezier(.09, .57, .49, .9) infinite; }
+  -webkit-animation: triangle-skew-spin 3s 0s cubic-bezier(.09, .57, .49, .9) infinite;
+          animation: triangle-skew-spin 3s 0s cubic-bezier(.09, .57, .49, .9) infinite; }
 
 @-webkit-keyframes square-spin {
   25% {
@@ -1652,8 +1652,8 @@
   height: 50px;
   background: #fff;
   border: 1px solid red;
-  -webkit-animation: square-spin 3s 0 cubic-bezier(.09, .57, .49, .9) infinite;
-          animation: square-spin 3s 0 cubic-bezier(.09, .57, .49, .9) infinite; }
+  -webkit-animation: square-spin 3s 0s cubic-bezier(.09, .57, .49, .9) infinite;
+          animation: square-spin 3s 0s cubic-bezier(.09, .57, .49, .9) infinite; }
 
 @-webkit-keyframes pacman-balls {
   75% {
@@ -1756,8 +1756,8 @@
     top: 0;
     left: 0;
     background-color: #fff;
-    -webkit-animation: cube-transition 1.6s 0 infinite ease-in-out;
-            animation: cube-transition 1.6s 0 infinite ease-in-out; }
+    -webkit-animation: cube-transition 1.6s 0s infinite ease-in-out;
+            animation: cube-transition 1.6s 0s infinite ease-in-out; }
     .cube-transition > div:last-child {
       -webkit-animation-delay: -0.8s;
               animation-delay: -0.8s; }
