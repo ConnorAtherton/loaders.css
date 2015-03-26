@@ -602,8 +602,8 @@
       -ms-transform: translate(-25px, -25px);
           transform: translate(-25px, -25px); }
   .ball-triangle-path > div:nth-child(1) {
-    -webkit-animation-name: "ball-triangle-path-1";
-            animation-name: "ball-triangle-path-1";
+    -webkit-animation-name: ball-triangle-path-1;
+            animation-name: ball-triangle-path-1;
     -webkit-animation-delay: 0;
             animation-delay: 0;
     -webkit-animation-duration: 2s;
@@ -613,8 +613,8 @@
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite; }
   .ball-triangle-path > div:nth-child(2) {
-    -webkit-animation-name: "ball-triangle-path-2";
-            animation-name: "ball-triangle-path-2";
+    -webkit-animation-name: ball-triangle-path-2;
+            animation-name: ball-triangle-path-2;
     -webkit-animation-delay: 0;
             animation-delay: 0;
     -webkit-animation-duration: 2s;
@@ -624,8 +624,8 @@
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite; }
   .ball-triangle-path > div:nth-child(3) {
-    -webkit-animation-name: "ball-triangle-path-3";
-            animation-name: "ball-triangle-path-3";
+    -webkit-animation-name: ball-triangle-path-3;
+            animation-name: ball-triangle-path-3;
     -webkit-animation-delay: 0;
             animation-delay: 0;
     -webkit-animation-duration: 2s;
