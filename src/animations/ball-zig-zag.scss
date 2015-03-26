@@ -41,11 +41,11 @@ $amount: 30px;
     left: $amount;
 
     &:first-child {
-      animation: ball-zig 0.7s 0 infinite linear;
+      animation: ball-zig 0.7s 0s infinite linear;
     }
 
     &:last-child {
-      animation: ball-zag 0.7s 0 infinite linear;
+      animation: ball-zag 0.7s 0s infinite linear;
     }
   }
 }

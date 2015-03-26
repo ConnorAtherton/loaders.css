@@ -41,6 +41,6 @@ $size: 50px;
     height: $size;
     border-radius: 100%;
     border: 2px solid $primary-color;
-    animation: ball-scale-ripple-multiple 1.25s 0 infinite cubic-bezier(.21,.53,.56,.8);
+    animation: ball-scale-ripple-multiple 1.25s 0s infinite cubic-bezier(.21,.53,.56,.8);
   }
 }

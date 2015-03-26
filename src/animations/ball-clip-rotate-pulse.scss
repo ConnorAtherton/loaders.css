@@ -40,7 +40,7 @@
       width: 16px;
       top: 9px;
       left: 9px;
-      animation: scale 1s 0 cubic-bezier(.09,.57,.49,.9) infinite;
+      animation: scale 1s 0s cubic-bezier(.09,.57,.49,.9) infinite;
     }
 
     &:last-child {
@@ -51,7 +51,7 @@
       background: transparent;
       border: 2px solid;
       border-color: $primary-color transparent $primary-color transparent;
-      animation: rotate 1s 0 cubic-bezier(.09,.57,.49,.9) infinite;
+      animation: rotate 1s 0s cubic-bezier(.09,.57,.49,.9) infinite;
       animation-duration: 1s;
     }
   }

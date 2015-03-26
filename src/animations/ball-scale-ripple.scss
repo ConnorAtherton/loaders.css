@@ -24,6 +24,6 @@
     width: 50px;
     border-radius: 100%;
     border: 2px solid $primary-color;;
-    animation: ball-scale-ripple 1s 0 infinite cubic-bezier(.21,.53,.56,.8);
+    animation: ball-scale-ripple 1s 0s infinite cubic-bezier(.21,.53,.56,.8);
   }
 }
