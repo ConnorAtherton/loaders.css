@@ -28,6 +28,6 @@ $size: 20px;
     border-left: $size solid transparent;
     border-right: $size solid transparent;
     border-bottom: $size solid $primary-color;
-    animation: triangle-skew-spin 3s 0 cubic-bezier(.09,.57,.49,.9) infinite;
+    animation: triangle-skew-spin 3s 0s cubic-bezier(.09,.57,.49,.9) infinite;
   }
 }
