@@ -3,9 +3,6 @@
   "version": "0.0.2",
   "description": "Loading animations in pure css",
   "main": "src/loaders.css",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git@github.com:ConnorAtherton/loaders.css.git"
