@@ -24,6 +24,10 @@ in a lot more detail.
 bower install loaders.css
 ```
 
+```
+npm i --save-dev loaders.css
+```
+
 ### Usage
 
 ##### Standard
