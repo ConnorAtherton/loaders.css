@@ -19,6 +19,18 @@ in a lot more detail.
 bower install loaders.css
 ```
 
+### Usage
+
+##### Standard
+- Include `loaders.min.css`
+- Create an element with the `.loader-inner` class and the name of the animation class (e.g. `<div class="loader-inner ball-pulse"></div>`)
+- Insert the appropriate number of `<div>`s into that element
+
+##### jQuery (optional)
+- Include `loaders.min.css`, jQuery, and `loaders.js`
+- Create an element with the `.loader-inner` class and the name of the animation class (e.g. `<div class="loader-inner ball-pulse"></div>`)
+- Enjoy
+
 ### Contributing
 
 Pull requests are welcome! Create another file in `src/animations`
