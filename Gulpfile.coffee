@@ -24,7 +24,7 @@ gulp.task 'demo:scss:compile',  ->
 
 gulp.task 'demo:jade:compile', ->
   gulp.src './demo/src/*.jade'
-    .pipe jade()
+    .pipe jade(pretty: true)
     .pipe gulp.dest './demo/'
 
 gulp.task 'watch', ->
