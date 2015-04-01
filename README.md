@@ -53,6 +53,17 @@ Add styles to the correct child `div` elements
 }
 ```
 
+### Browser support
+
+Check the [can I use](http://caniuse.com/#search=css-animation) [tables](http://caniuse.com/#search=css-transform).
+All recent versions of the major browsers are supported and it has support back to IE9.
+
+Note: The loaders aren't run through autoprefixer, see this [issue](https://github.com/ConnorAtherton/loaders.css/issues/18).
+
+IE 11  | Firefox 36 | Chrome 41 | Safari 8
+------ | ---------- | --------- | --------
+✔ | ✔ | ✔ | ✔
+
 ### Contributing
 
 Pull requests are welcome! Create another file in `src/animations`
