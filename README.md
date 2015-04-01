@@ -79,6 +79,8 @@ in a browser to see your animation running.
 - http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/
 - http://frontendbabel.info/articles/webpage-rendering-101/
 
+[Jon Jaques](https://github.com/jonjaques) has built a small React demo you can check out [here](https://github.com/jonjaques/react-loaders)
+
 ### Licence
 
 The MIT License (MIT)
