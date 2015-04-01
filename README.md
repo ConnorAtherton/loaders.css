@@ -36,7 +36,7 @@ npm i --save-dev loaders.css
 - Insert the appropriate number of `<div>`s into that element
 
 ##### jQuery (optional)
-- Include `loaders.min.css`, jQuery, and `loaders.js`
+- Include `loaders.min.css`, jQuery, and `loaders.css.js`
 - Create an element and add the animation class (e.g. `<div class="loader-inner ball-pulse"></div>`)
 - `loaders.js` is a simple helper to inject the correct number of div elements for each animation
 - Enjoy
