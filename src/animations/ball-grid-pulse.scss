@@ -34,6 +34,7 @@
     @include global-animation();
 
     display: inline-block;
+    float: left;
     animation-name: ball-grid-pulse;
     animation-iteration-count: infinite;
     animation-delay: 0;

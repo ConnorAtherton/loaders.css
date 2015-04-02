@@ -9,9 +9,9 @@ gutil = require 'gulp-util'
 gulp.task 'scss:compile', ->
   gulp.src './src/loaders.scss'
     .pipe sass()
-    # .pipe autoprefixer "last 2 versions", "> 1%", "ie 8", {
-    #     map: false
-    #   }
+    .pipe autoprefixer "last 2 versions", "> 1%", "ie 8", {
+        map: false
+      }
     .pipe gulp.dest('./')
     .pipe cssmin()
     .pipe rename suffix: '.min'
