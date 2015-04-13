@@ -4,15 +4,15 @@
 $size: 35px;
 $pos: 30%;
 
-@keyframes spin-rotate {
+@include keyframes(spin-rotate) {
   0% {
-    transform: rotate(0deg);
+    @include transform(rotate(0deg));
   }
   50% {
-    transform: rotate(180deg);
+    @include transform(rotate(180deg));
   }
   100% {
-    transform: rotate(360deg);
+    @include transform(rotate(360deg));
  }
 }
 
@@ -24,9 +24,9 @@ $pos: 30%;
 
   > div {
     position: absolute;
-    border-width: 0px;
+    border-width: 0;
     border-radius: 100%;
-    animation: spin-rotate 0.6s 0s infinite linear;
+    @include css3-prefix("animation",  spin-rotate 0.6s 0s infinite linear);
     background-image: linear-gradient(transparent 0%, transparent (100% - $pos), $primary-color $pos, $primary-color 100%);
     width: 100%;
     height: 100%;

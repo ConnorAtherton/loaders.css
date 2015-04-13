@@ -1,13 +1,13 @@
 @import '../variables';
 @import '../mixins';
 
-@keyframes ball-scale {
+@include keyframes(ball-scale) {
   0% {
-    transform: scale(0.0);
+    @include transform(scale(0.0));
   }
   100% {
-    transform: scale(1.0);
-    opacity: 0;
+    @include transform(scale(1.0));
+    @include opacity(0);
   }
 }
 
@@ -20,6 +20,6 @@
     display: inline-block;
     height: 60px;
     width: 60px;
-    animation: ball-scale 1s 0s ease-in-out infinite;
+    @include css3-prefix("animation",  ball-scale 1s 0s ease-in-out infinite);
   }
 }

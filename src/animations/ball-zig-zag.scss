@@ -3,33 +3,33 @@
 
 $amount: 30px;
 
-@keyframes ball-zig {
+@include keyframes(ball-zig) {
   33% {
-    transform: translate(-$amount/2, -$amount);
+    @include transform(translate(-$amount/2, -$amount));
   }
   66% {
-    transform: translate($amount/2, -$amount);
+    @include transform(translate($amount/2, -$amount));
   }
   100% {
-    transform: translate(0, 0);
+    @include transform(translate(0, 0));
   }
 }
 
-@keyframes ball-zag {
+@include keyframes(ball-zag) {
   33% {
-    transform: translate($amount/2, $amount);
+    @include transform(translate($amount/2, $amount));
   }
   66% {
-    transform: translate(-$amount/2, $amount);
+    @include transform(translate(-$amount/2, $amount));
   }
   100% {
-    transform: translate(0, 0);
+    @include transform(translate(0, 0));
   }
 }
 
 .ball-zig-zag {
   position: relative;
-  transform: translate(-$amount / 2, -$amount / 2);
+  @include transform(translate(-$amount / 2, -$amount / 2));
 
   > div {
     @include balls();
@@ -41,11 +41,11 @@ $amount: 30px;
     left: $amount;
 
     &:first-child {
-      animation: ball-zig 0.7s 0s infinite linear;
+      @include css3-prefix("animation",  ball-zig 0.7s 0s infinite linear);
     }
 
     &:last-child {
-      animation: ball-zag 0.7s 0s infinite linear;
+      @include css3-prefix("animation",  ball-zag 0.7s 0s infinite linear);
     }
   }
 }

@@ -1,15 +1,15 @@
 @import '../variables';
 @import '../mixins';
 
-@keyframes rotate {
+@include keyframes(rotate) {
   0% {
-    transform: rotate(0deg) scale(1);
+    @include transform(rotate(0deg) scale(1));
   }
   50% {
-    transform: rotate(180deg) scale(0.6);
+    @include transform(rotate(180deg) scale(0.6));
   }
   100% {
-   transform: rotate(360deg) scale(1);
+    @include transform(rotate(360deg) scale(1));
  }
 }
 
@@ -25,6 +25,6 @@
     width: 25px;
     background: transparent !important;
     display: inline-block;
-    animation: rotate 0.75s 0s linear infinite;
+    @include css3-prefix('animation', rotate 0.75s 0s linear infinite);
   }
 }

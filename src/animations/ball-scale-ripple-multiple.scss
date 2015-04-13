@@ -3,24 +3,24 @@
 
 $size: 50px;
 
-@keyframes ball-scale-ripple-multiple {
+@include keyframes(ball-scale-ripple-multiple) {
   0% {
-    transform: scale(0.1);
-    opacity: 1;
+    @include transform(scale(0.1));
+    @include opacity(1);
   }
   70% {
-    transform: scale(1);
-    opacity: 0.7;
+    @include transform(scale(1));
+    @include opacity(0.7);
   }
   100% {
-    opacity: 0.0;
+    @include opacity(0.0);
   }
 }
 
 @mixin ball-scale-ripple-multiple ($n:3, $start:0) {
   @for $i from $start through $n {
     > div:nth-child(#{$i}) {
-      animation-delay: (($i - 1) * 0.2) + s;
+      @include css3-prefix("animation-delay",  (($i - 1) * 0.2) + s);
     }
   }
 }
@@ -29,7 +29,7 @@ $size: 50px;
   @include ball-scale-ripple-multiple();
 
   position: relative;
-  transform: translateY(-$size / 2);
+  @include transform(translateY(-$size / 2));
 
   > div {
     @include global-animation();
@@ -41,6 +41,6 @@ $size: 50px;
     height: $size;
     border-radius: 100%;
     border: 2px solid $primary-color;
-    animation: ball-scale-ripple-multiple 1.25s 0s infinite cubic-bezier(.21,.53,.56,.8);
+    @include css3-prefix("animation",  ball-scale-ripple-multiple 1.25s 0s infinite cubic-bezier(.21,.53,.56,.8));
   }
 }

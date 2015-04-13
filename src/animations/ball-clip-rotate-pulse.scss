@@ -1,37 +1,37 @@
 @import '../variables';
 @import '../mixins';
 
-@keyframes rotate {
+@include keyframes(rotate) {
   0% {
-    transform: rotate(0deg) scale(1);
+    @include transform(rotate(0deg) scale(1));
   }
   50% {
-    transform: rotate(180deg) scale(0.6);
+    @include transform(rotate(180deg) scale(0.6));
   }
   100% {
-   transform: rotate(360deg) scale(1);
+   @include transform(rotate(360deg) scale(1));
  }
 }
 
-@keyframes scale {
+@include keyframes(scale) {
   30% {
-    transform: scale(0.3);
+    @include transform(scale(0.3));
   }
   100% {
-    transform: scale(1);
+    @include transform(scale(1));
   }
 }
 
 .ball-clip-rotate-pulse {
   position: relative;
-  transform: translateY(-15px);
+  @include transform(translateY(-15px));
 
   > div {
     @include global-animation();
 
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     border-radius: 100%;
 
     &:first-child {
@@ -40,7 +40,7 @@
       width: 16px;
       top: 9px;
       left: 9px;
-      animation: scale 1s 0s cubic-bezier(.09,.57,.49,.9) infinite;
+      @include css3-prefix("animation",  scale 1s 0s cubic-bezier(.09,.57,.49,.9) infinite);
     }
 
     &:last-child {
@@ -49,10 +49,13 @@
       width: 30px;
       height: 30px;
       background: transparent;
-      border: 2px solid;
-      border-color: $primary-color transparent $primary-color transparent;
-      animation: rotate 1s 0s cubic-bezier(.09,.57,.49,.9) infinite;
-      animation-duration: 1s;
+      border: {
+        size: 2px;
+        style: solid;
+        color: $primary-color transparent $primary-color transparent;
+      };
+      @include css3-prefix("animation",  rotate 1s 0s cubic-bezier(.09,.57,.49,.9) infinite);
+      @include css3-prefix("animation-duration",  1s);
     }
   }
 }

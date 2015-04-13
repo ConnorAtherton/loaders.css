@@ -3,18 +3,18 @@
 
 $size: 20px;
 
-@keyframes triangle-skew-spin {
+@include keyframes(triangle-skew-spin) {
   25% {
-    transform: perspective(100px) rotateX(180deg) rotateY(0);
+    @include transform(perspective(100px) rotateX(180deg) rotateY(0deg));
   }
   50% {
-    transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+    @include transform(perspective(100px) rotateX(180deg) rotateY(180deg));
   }
   75% {
-    transform: perspective(100px) rotateX(0) rotateY(180deg);
+    @include transform(perspective(100px) rotateX(0deg) rotateY(180deg));
   }
   100% {
-    transform: perspective(100px) rotateX(0) rotateY(0);
+    @include transform(perspective(100px) rotateX(0deg) rotateY(0deg));
   }
 }
 
@@ -25,9 +25,11 @@ $size: 20px;
 
     width: 0;
     height: 0;
-    border-left: $size solid transparent;
-    border-right: $size solid transparent;
-    border-bottom: $size solid $primary-color;
-    animation: triangle-skew-spin 3s 0s cubic-bezier(.09,.57,.49,.9) infinite;
+    border: {
+      left: $size solid transparent;
+      right: $size solid transparent;
+      bottom: $size solid $primary-color;
+    };
+    @include css3-prefix("animation",  triangle-skew-spin 3s 0s cubic-bezier(.09,.57,.49,.9) infinite);
   }
 }

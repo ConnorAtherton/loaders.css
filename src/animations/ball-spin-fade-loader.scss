@@ -3,14 +3,14 @@
 
 $radius: 25px;
 
-@keyframes ball-spin-fade-loader {
+@include keyframes(ball-spin-fade-loader) {
   50% {
-    opacity: 0.3;
-    transform: scale(0.4);
+    @include opacity(0.3);
+    @include transform(scale(0.4));
   }
   100% {
-    opacity: 1;
-    transform: scale(1);
+    @include opacity(1);
+    @include transform(scale(1));
   }
 }
 
@@ -46,7 +46,7 @@ $radius: 25px;
         left: -$quarter;
       }
 
-      animation: ball-spin-fade-loader 1s (($i - 1) * 0.12s) infinite linear;
+      @include css3-prefix("animation",  ball-spin-fade-loader 1s (($i - 1) * 0.12s) infinite linear);
     }
   }
 }

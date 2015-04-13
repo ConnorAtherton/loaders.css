@@ -3,12 +3,12 @@
 
 $radius: 20px;
 
-@keyframes line-spin-fade-loader {
+@include keyframes(line-spin-fade-loader) {
   50% {
-    opacity: 0.3;
+    @include opacity(0.3);
   }
   100% {
-    opacity: 1;
+    @include opacity(1);
   }
 }
 
@@ -24,33 +24,33 @@ $radius: 20px;
       } @else if $i == 2 {
         top: $quarter;
         left: $quarter;
-        transform: rotate(-45deg);
+        @include transform(rotate(-45deg));
       } @else if $i == 3 {
         top: 0;
         left: $radius;
-        transform: rotate(90deg);
+        @include transform(rotate(90deg));
       } @else if $i == 4 {
         top: -$quarter;
         left: $quarter;
-        transform: rotate(45deg);
+        @include transform(rotate(45deg));
       } @else if $i == 5 {
         top: -$radius;
         left: 0;
       } @else if $i == 6 {
         top: -$quarter;
         left: -$quarter;
-        transform: rotate(-45deg);
+        @include transform(rotate(-45deg));
       } @else if $i == 7 {
         top: 0;
         left: -$radius;
-        transform: rotate(90deg);
+        @include transform(rotate(90deg));
       } @else if $i == 8 {
         top: $quarter;
         left: -$quarter;
-        transform: rotate(45deg);
+        @include transform(rotate(45deg));
       }
 
-      animation: line-spin-fade-loader 1.2s ($i * 0.12s) infinite ease-in-out;
+      @include css3-prefix("animation",  line-spin-fade-loader 1.2s ($i * 0.12s) infinite ease-in-out);
     }
   }
 }

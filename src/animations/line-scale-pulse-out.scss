@@ -1,15 +1,15 @@
 @import '../variables';
 @import '../mixins';
 
-@keyframes line-scale-pulse-out {
+@include keyframes(line-scale-pulse-out) {
   0% {
-    transform: scaley(1.0);
+    @include transform(scaley(1.0));
   }
   50% {
-    transform: scaley(0.4);
+    @include transform(scaley(0.4));
   }
   100% {
-    transform: scaley(1.0);
+    @include transform(scaley(1.0));
   }
 }
 
@@ -20,14 +20,14 @@
     @include global-animation();
 
     display: inline-block;
-    animation: line-scale-pulse-out 0.9s 0s infinite cubic-bezier(.85,.25,.37,.85);
+    @include css3-prefix("animation",  line-scale-pulse-out 0.9s 0s infinite cubic-bezier(.85,.25,.37,.85));
 
     &:nth-child(2), &:nth-child(4) {
-      animation-delay: 0.2s !important;
+      @include css3-prefix("animation-delay",  0.2s !important);
     }
 
     &:nth-child(1), &:nth-child(5) {
-      animation-delay: 0.4s !important;
+      @include css3-prefix("animation-delay",  0.4s !important);
     }
 
   }

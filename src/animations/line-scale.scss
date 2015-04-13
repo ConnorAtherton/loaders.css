@@ -1,22 +1,22 @@
 @import '../variables';
 @import '../mixins';
 
-@keyframes line-scale {
+@include keyframes(line-scale) {
   0% {
-    transform: scaley(1.0);
+    @include transform(scaley(1.0));
   }
   50% {
-    transform: scaley(0.4);
+    @include transform(scaley(0.4));
   }
   100% {
-    transform: scaley(1.0);
+    @include transform(scaley(1.0));
   }
 }
 
 @mixin line-scale($n:5) {
   @for $i from 1 through $n {
     > div:nth-child(#{$i}) {
-      animation: line-scale 1s ($i * 0.1s) infinite cubic-bezier(.2,.68,.18,1.08);
+      @include css3-prefix("animation",  line-scale 1s ($i * 0.1s) infinite cubic-bezier(.2,.68,.18,1.08));
     }
   }
 }

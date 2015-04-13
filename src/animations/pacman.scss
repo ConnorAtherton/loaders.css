@@ -3,19 +3,53 @@
 
 $size: 25px;
 
-@keyframes pacman-balls {
+@include keyframes(pacman-balls) {
   75% {
-    opacity: 0.7;
+    @include opacity(0.7);
   }
   100% {
-    transform: translate(-4 * $size, -$size / 4);
+    @include transform(translate(-4 * $size, -$size / 4));
   }
+}
+
+@include keyframes(rotate_pacman_half_up) {
+  0% {
+    @include transform(rotate(270deg));
+  }
+  50% {
+    @include transform(rotate(360deg));
+  }
+  100% {
+    @include transform(rotate(270deg));
+  }
+}
+
+@include keyframes(rotate_pacman_half_down) {
+  0% {
+    @include transform(rotate(90deg));
+  }
+  50% {
+    @include transform(rotate(0deg));
+  }
+  100% {
+    @include transform(rotate(90deg));
+  }
+}
+
+@mixin pacman_design(){
+  width: 0;
+  height: 0;
+  border-right: $size solid transparent;
+  border-top: $size solid $primary-color;
+  border-left: $size solid $primary-color;
+  border-bottom: $size solid $primary-color;
+  border-radius: $size;
 }
 
 @mixin ball-placement($n:3, $start:0) {
   @for $i from $start through $n {
     > div:nth-child(#{$i + 2}) {
-      animation: pacman-balls 1s ($i * .25s) infinite linear;
+      @include css3-prefix("animation",  pacman-balls 1s ($i * .33s) infinite linear);
     }
   }
 }
@@ -26,16 +60,16 @@ $size: 25px;
   position: relative;
 
   > div:first-of-type {
-    width: 0px;
-    height: 0px;
-    border-right: $size solid transparent;
-    border-top: $size solid $primary-color;
-    border-left: $size solid $primary-color;
-    border-bottom: $size solid $primary-color;
-    border-radius: $size;
+    @include pacman_design();
+    @include css3-prefix("animation", rotate_pacman_half_up 0.5s 0s infinite);
   }
 
-  > div:nth-child(2),
+  > div:nth-child(2) {
+    @include pacman_design();
+    @include css3-prefix("animation", rotate_pacman_half_down 0.5s 0s infinite);
+    margin-top: -2 * $size;
+  }
+
   > div:nth-child(3),
   > div:nth-child(4),
   > div:nth-child(5) {
@@ -45,7 +79,7 @@ $size: 25px;
     height: 10px;
 
     position: absolute;
-    transform: translate(0, -$size / 4);
+    @include transform(translate(0, -$size / 4));
     top: 25px;
     left: 100px;
   }

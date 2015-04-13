@@ -29,5 +29,8 @@
     "gulp-sass": "^1.2.4",
     "scss-lint": "0.0.0",
     "gulp-util": "^3.0.3"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/coffee -c ./Gulpfile.coffee"
   }
 }

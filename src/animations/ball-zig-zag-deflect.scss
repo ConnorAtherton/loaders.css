@@ -3,51 +3,51 @@
 
 $amount: 30px;
 
-@keyframes ball-zig-deflect {
+@include keyframes(ball-zig-deflect) {
   17% {
-    transform: translate(-$amount/2, -$amount);
+    @include transform(translate(-$amount/2, -$amount));
   }
   34% {
-    transform: translate($amount/2, -$amount);
+    @include transform(translate($amount/2, -$amount));
   }
   50% {
-    transform: translate(0, 0);
+    @include transform(translate(0, 0));
   }
   67% {
-    transform: translate($amount/2, -$amount);
+    @include transform(translate($amount/2, -$amount));
   }
   84% {
-    transform: translate(-$amount/2, -$amount);
+    @include transform(translate(-$amount/2, -$amount));
   }
   100% {
-    transform: translate(0, 0);
+    @include transform(translate(0, 0));
   }
 }
 
-@keyframes ball-zag-deflect {
+@include keyframes(ball-zag-deflect) {
   17% {
-    transform: translate($amount/2, $amount);
+    @include transform(translate($amount/2, $amount));
   }
   34% {
-    transform: translate(-$amount/2, $amount);
+    @include transform(translate(-$amount/2, $amount));
   }
   50% {
-    transform: translate(0, 0);
+    @include transform(translate(0, 0));
   }
   67% {
-    transform: translate(-$amount/2, $amount);
+    @include transform(translate(-$amount/2, $amount));
   }
   84% {
-    transform: translate($amount/2, $amount);
+    @include transform(translate($amount/2, $amount));
   }
   100% {
-    transform: translate(0, 0);
+    @include transform(translate(0, 0));
   }
 }
 
 .ball-zig-zag-deflect {
   position: relative;
-  transform: translate(-$amount / 2, -$amount / 2);
+  @include transform(translate(-$amount / 2, -$amount / 2));
 
   > div {
     @include balls();
@@ -59,11 +59,11 @@ $amount: 30px;
     left: $amount;
 
     &:first-child {
-      animation: ball-zig-deflect 1.5s 0s infinite linear;
+      @include css3-prefix("animation",  ball-zig-deflect 1.5s 0s infinite linear);
     }
 
     &:last-child {
-      animation: ball-zag-deflect 1.5s 0s infinite linear;
+      @include css3-prefix("animation",  ball-zag-deflect 1.5s 0s infinite linear);
     }
   }
 }

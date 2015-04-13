@@ -3,24 +3,24 @@
 
 $size: 60px;
 
-@keyframes ball-scale-multiple {
+@include keyframes(ball-scale-multiple) {
   0% {
-    transform: scale(0.0);
-    opacity: 0;
+    @include transform(scale(0.0));
+    @include opacity(0);
   }
   5% {
-    opacity: 1;
+    @include opacity(1);
   }
   100% {
-    transform: scale(1.0);
-    opacity: 0;
+    @include transform(scale(1.0));
+    @include opacity(0);
   }
 }
 
 @mixin ball-scale-multiple ($n:3, $start:0) {
   @for $i from 2 through $n {
     > div:nth-child(#{$i}) {
-      animation-delay: (($i - 1) * 0.2) + s;
+      @include css3-prefix("animation-delay",  (($i - 1) * 0.2) + s);
     }
   }
 }
@@ -29,19 +29,19 @@ $size: 60px;
   @include ball-scale-multiple();
 
   position: relative;
-  transform: translateY(-$size / 2);
+  @include transform(translateY(-$size / 2));
 
   > div {
     @include balls();
     @include global-animation();
 
     position: absolute;
-    left: 0px;
-    top: 0px;
-    opacity: 0;
+    left: 0;
+    top: 0;
+    @include opacity(0);
     margin: 0;
     width: $size;
     height: $size;
-    animation: ball-scale-multiple 1s 0s linear infinite;
+    @include css3-prefix("animation",  ball-scale-multiple 1s 0s linear infinite);
   }
 }

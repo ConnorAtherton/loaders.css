@@ -1,14 +1,14 @@
 @import '../variables';
 @import '../mixins';
 
-@keyframes ball-beat {
+@include keyframes(ball-beat) {
   50% {
-    opacity: 0.2;
-    transform: scale(0.75);
+    @include opacity(0.2);
+    @include transform(scale(0.75));
   }
   100% {
-    opacity: 1;
-    transform: scale(1);
+    @include opacity(1);
+    @include transform(scale(1));
   }
 }
 
@@ -19,10 +19,10 @@
     @include global-animation();
 
     display: inline-block;
-    animation: ball-beat 0.7s 0s infinite linear;
+    @include css3-prefix('animation', ball-beat 0.7s 0s infinite linear);
 
     &:nth-child(2n-1) {
-      animation-delay: 0.35s !important;
+      @include css3-prefix('animation-delay', 0.35s !important);
     }
   }
 }

@@ -3,39 +3,39 @@
 
 $amount: 50px;
 
-@keyframes ball-triangle-path-1 {
+@include keyframes(ball-triangle-path-1) {
   33% {
-    transform: translate($amount / 2, -$amount);
+    @include transform(translate($amount / 2, -$amount));
   }
   66% {
-    transform: translate($amount, 0px);
+    @include transform(translate($amount, 0px));
   }
   100% {
-    transform: translate(0px, 0px);
+    @include transform(translate(0px, 0px));
   }
 }
 
-@keyframes ball-triangle-path-2 {
+@include keyframes(ball-triangle-path-2) {
   33% {
-    transform: translate($amount / 2, $amount);
+    @include transform(translate($amount / 2, $amount));
   }
   66% {
-    transform: translate(- $amount / 2, $amount);
+    @include transform(translate(- $amount / 2, $amount));
   }
   100% {
-    transform: translate(0px, 0px);
+    @include transform(translate(0px, 0px));
   }
 }
 
-@keyframes ball-triangle-path-3 {
+@include keyframes(ball-triangle-path-3) {
   33% {
-    transform: translate(-$amount, 0px);
+    @include transform(translate(-$amount, 0px));
   }
   66% {
-    transform: translate(- $amount / 2, -$amount);
+    @include transform(translate(- $amount / 2, -$amount));
   }
   100% {
-    transform: translate(0px, 0px);
+    @include transform(translate(0px, 0px));
   }
 }
 
@@ -44,11 +44,11 @@ $amount: 50px;
 
   @for $i from 1 through $n {
     > div:nth-child(#{$i}) {
-      animation-name: nth($animations, $i);
-      animation-delay: 0;
-      animation-duration: 2s;
-      animation-timing-function: ease-in-out;
-      animation-iteration-count: infinite;
+      @include css3-prefix("animation-name",  nth($animations, $i));
+      @include css3-prefix("animation-delay",  0);
+      @include css3-prefix("animation-duration",  2s);
+      @include css3-prefix("animation-timing-function",  ease-in-out);
+      @include css3-prefix("animation-iteration-count",  infinite);
     }
   }
 }
@@ -56,7 +56,7 @@ $amount: 50px;
 .ball-triangle-path {
   position: relative;
   @include ball-triangle-path();
-  transform: translate(-$amount / 2, -$amount / 2);
+  @include transform(translate(-$amount / 2, -$amount / 2));
 
   > div {
     @include global-animation();
