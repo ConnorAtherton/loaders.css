@@ -55,6 +55,8 @@ $radius: 25px;
   @include ball-spin-fade-loader();
 
   position: relative;
+  top: -10px;
+  left: -10px;
 
   > div {
     @include balls();

@@ -38,8 +38,8 @@
       background: $primary-color;
       height: 16px;
       width: 16px;
-      top: 9px;
-      left: 9px;
+      top: 7px;
+      left: -7px;
       animation: scale 1s 0s cubic-bezier(.09,.57,.49,.9) infinite;
     }
 
@@ -47,7 +47,9 @@
       position: absolute;
       border: 2px solid $primary-color;
       width: 30px;
-      height: 30px;
+      height: 30px;  
+      left: -16px;
+      top: -2px;
       background: transparent;
       border: 2px solid;
       border-color: $primary-color transparent $primary-color transparent;

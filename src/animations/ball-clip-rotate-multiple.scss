@@ -20,8 +20,8 @@
     @include global-animation();
 
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: -20px;
+    top: -20px;
     border: 2px solid $primary-color;
     border-bottom-color: transparent;
     border-top-color: transparent;
@@ -32,8 +32,8 @@
 
     &:last-child {
       display: inline-block;
-      top: 10px;
-      left: 10px;
+      top: -10px;
+      left: -10px;
       width: 15px;
       height: 15px;
       animation-duration: 0.5s;

@@ -55,8 +55,8 @@ $amount: 30px;
 
     position: absolute;
     margin-left: $amount / 2;
-    top: $amount;
-    left: $amount;
+    top: 4px;
+    left: -7px;
 
     &:first-child {
       animation: ball-zig-deflect 1.5s 0s infinite linear;
