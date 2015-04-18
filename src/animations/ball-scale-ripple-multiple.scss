@@ -35,8 +35,8 @@ $size: 50px;
     @include global-animation();
 
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -2px;
+    left: -26px;
     width: $size;
     height: $size;
     border-radius: 100%;

@@ -37,8 +37,8 @@ $amount: 30px;
 
     position: absolute;
     margin-left: $amount / 2;
-    top: $amount;
-    left: $amount;
+    top: 4px;
+    left: -7px;
 
     &:first-child {
       animation: ball-zig 0.7s 0s infinite linear;

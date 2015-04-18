@@ -56,7 +56,7 @@ $amount: 50px;
 .ball-triangle-path {
   position: relative;
   @include ball-triangle-path();
-  transform: translate(-$amount / 2, -$amount / 2);
+  transform: translate(-$amount / 1.667, -$amount / 1.333);
 
   > div {
     @include global-animation();

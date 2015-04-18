@@ -29,8 +29,8 @@ $size: 10px;
     width: $size;
     height: $size;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -5px;
+    left: -5px;
     background-color: $primary-color;
     animation: cube-transition 1.6s 0s infinite ease-in-out;
 
