@@ -1,5 +1,6 @@
 @import '../variables';
 @import '../mixins';
+@import '../functions';
 
 $radius: 20px;
 
@@ -50,7 +51,7 @@ $radius: 20px;
         transform: rotate(45deg);
       }
 
-      animation: line-spin-fade-loader 1.2s ($i * 0.12s) infinite ease-in-out;
+      animation: line-spin-fade-loader 1.2s delay(0.12s, $n, $i) infinite ease-in-out;
     }
   }
 }

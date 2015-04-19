@@ -1,5 +1,6 @@
 @import '../variables';
 @import '../mixins';
+@import '../functions';
 
 $radius: 25px;
 
@@ -46,7 +47,7 @@ $radius: 25px;
         left: -$quarter;
       }
 
-      animation: ball-spin-fade-loader 1s (($i - 1) * 0.12s) infinite linear;
+      animation: ball-spin-fade-loader 1s delay(0.12s, $n, $i - 1) infinite linear;
     }
   }
 }

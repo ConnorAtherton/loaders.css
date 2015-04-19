@@ -1,5 +1,6 @@
 @import '../variables';
 @import '../mixins';
+@import '../functions';
 
 $size: 25px;
 
@@ -49,7 +50,7 @@ $size: 25px;
 @mixin ball-placement($n:3, $start:0) {
   @for $i from $start through $n {
     > div:nth-child(#{$i + 2}) {
-      animation: pacman-balls 1s ($i * .33s) infinite linear;
+      animation: pacman-balls 1s delay(.33s, $n, $i) infinite linear;
     }
   }
 }

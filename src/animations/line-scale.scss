@@ -1,5 +1,6 @@
 @import '../variables';
 @import '../mixins';
+@import '../functions';
 
 @keyframes line-scale {
   0% {
@@ -16,7 +17,7 @@
 @mixin line-scale($n:5) {
   @for $i from 1 through $n {
     > div:nth-child(#{$i}) {
-      animation: line-scale 1s ($i * 0.1s) infinite cubic-bezier(.2,.68,.18,1.08);
+      animation: line-scale 1s delay(0.1s, $n, $i) infinite cubic-bezier(.2,.68,.18,1.08);
     }
   }
 }

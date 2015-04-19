@@ -1,5 +1,6 @@
 @import '../variables';
 @import '../mixins';
+@import '../functions';
 
 @keyframes scale {
   0% {
@@ -20,7 +21,7 @@
 @mixin ball-pulse($n:3, $start:0) {
   @for $i from $start through $n {
     > div:nth-child(#{$i}) {
-      animation: scale 0.75s ($i * 0.12s) infinite cubic-bezier(.2,.68,.18,1.08);
+      animation: scale 0.75s delay(0.12s, $n, $i) infinite cubic-bezier(.2,.68,.18,1.08);
     }
   }
 }
