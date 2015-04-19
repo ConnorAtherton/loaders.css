@@ -69,7 +69,7 @@ IE 11  | Firefox 36 | Chrome 41 | Safari 8
 Pull requests are welcome! Create another file in `src/animations`
 and load it in `src/loader.scss`.
 
-In a separate tab run `gulp --require coffee-script`. Open `demo/demo.html`
+In a separate tab run `gulp --require coffee-script/register`. Open `demo/demo.html`
 in a browser to see your animation running.
 
 ### Further research
