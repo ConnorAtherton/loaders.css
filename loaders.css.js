@@ -36,5 +36,9 @@ $(function() {
   $('.loader-inner.pacman').html(addDivs(5));
   $('.loader-inner.ball-grid-beat').html(addDivs(9));
   $('.loader-inner.semi-circle-spin').html(addDivs(1));
+  $('.loader-inner.bar-progress').html(addDivs(1));
+  $('.loader-inner.ball-scale-random').html(addDivs(3));
+  $('.loader-inner.bar-swing').html(addDivs(1));
+  $('.loader-inner.bar-swing-container').html(addDivs(2));
 
 });

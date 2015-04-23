@@ -1,0 +1,42 @@
+$initial-size: 30%;
+$height: 8px;
+$radius: 10px;
+
+@keyframes bar-swing-container {
+  0% {
+    left: 0;
+    transform: translateX(0);
+  }
+  50% {
+    left: 100% - $initial-size;
+    transform: translateX(-4px);
+  }
+  100% {
+    left: 0;
+    transform: translateX(0);
+  }
+}
+
+.bar-swing-container {
+  width: 20%;
+  height: $height;
+  position: relative;
+	
+	div:nth-child(1) {
+	  position: absolute;
+		width: 100%;
+		background-color: rgba(255, 255, 255, 0.2);
+	  height: $height + 4px;
+	  border-radius: $radius;
+	}
+
+  div:nth-child(2) {
+    position: absolute;
+    width: $initial-size;
+    height: $height;
+    border-radius: $radius;
+    background-color: #fff;
+    animation: bar-swing-container 2s cubic-bezier(.91,.35,.12,.6) infinite;
+    margin: 2px 2px 0;
+  }
+}
