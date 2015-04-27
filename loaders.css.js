@@ -36,5 +36,6 @@ $(function() {
   $('.loader-inner.pacman').html(addDivs(5));
   $('.loader-inner.ball-grid-beat').html(addDivs(9));
   $('.loader-inner.semi-circle-spin').html(addDivs(1));
+  $('.loader-inner.infinity-spin').html(addDivs(2));
 
 });
