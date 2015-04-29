@@ -1881,7 +1881,7 @@
     width: 100%;
     height: 100%; }
 
-@-webkit-keyframes infinity-spin-rotate {
+@-webkit-keyframes dancing-lights-rotate {
     000.00%  { top: 45.00px; left: 000.00px; opacity: 1.00; -webkit-transform: scale(1.00);}
 
     006.25%  { top: 10.00px; left: 004.50px; opacity: 0.90; -webkit-transform: scale(0.95);}
@@ -1905,7 +1905,7 @@
     100.00%  { top: 45.00px; left: 000.00px; opacity: 1.00; -webkit-transform: scale(1.00);}
    }
 
-@keyframes infinity-spin-rotate {
+@keyframes dancing-lights-rotate {
     000.00%  { top: 45.00px; left: 000.00px; opacity: 1.00; transform: scale(1.00);}
 
     006.25%  { top: 10.00px; left: 004.50px; opacity: 0.90; transform: scale(0.95);}
@@ -1929,7 +1929,7 @@
     100.00%  { top: 45.00px; left: 000.00px; opacity: 1.00; transform: scale(1.00);}
    }
 
-@-webkit-keyframes anti-infinity-spin-rotate {
+@-webkit-keyframes anti-dancing-lights-rotate {
     000.00%  { top: 45.00px; left: 000.00px; opacity: 1.00; -webkit-transform: scale(1.00);}
 
     093.75%  { top: 10.00px; left: 004.50px; opacity: 0.90; -webkit-transform: scale(0.95);}
@@ -1953,7 +1953,7 @@
     100.00%  { top: 45.00px; left: 000.00px; opacity: 1.00; -webkit-transform: scale(1.00);}
    }
 
-@keyframes anti-infinity-spin-rotate {
+@keyframes anti-dancing-lights-rotate {
     000.00%  { top: 45.00px; left: 000.00px; opacity: 1.00; transform: scale(1.00);}
 
     093.75%  { top: 10.00px; left: 004.50px; opacity: 0.90; transform: scale(0.95);}
@@ -1977,12 +1977,12 @@
     100.00%  { top: 45.00px; left: 000.00px; opacity: 1.00; transform: scale(1.00);}
    }
 
-.infinity-spin {
+.dancing-lights-2 {
     position: relative;
     width: 150px;
     height:100px;
     overflow: hidden; }
-  .infinity-spin > div:nth-child(1) {
+  .dancing-lights-2 > div:nth-child(1) {
     position: absolute;
     width: 10px;
     height: 10px;
@@ -1991,10 +1991,10 @@
     top: 45px; 
     left:0px;
 
-    -webkit-animation: infinity-spin-rotate 2s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
-            animation: infinity-spin-rotate 2s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+    -webkit-animation: dancing-lights-rotate 2s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+            animation: dancing-lights-rotate 2s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
   }
-  .infinity-spin > div:nth-child(2) {
+  .dancing-lights-2 > div:nth-child(2) {
     position: absolute;
     width: 10px;
     height: 10px;
@@ -2003,6 +2003,240 @@
     top: 45px; 
     left:140px;
 
-    -webkit-animation: anti-infinity-spin-rotate 1.5s -0.6s infinite cubic-bezier(0.42,0,1,1);
-            animation: anti-infinity-spin-rotate 1.5s -0.6s infinite cubic-bezier(0.42,0,1,1);
+    -webkit-animation: anti-dancing-lights-rotate 1.5s -0.6s infinite cubic-bezier(0.42,0,1,1);
+            animation: anti-dancing-lights-rotate 1.5s -0.6s infinite cubic-bezier(0.42,0,1,1);
+  }
+
+.dancing-lights-4 {
+    position: relative;
+    width: 150px;
+    height:100px;
+    overflow: hidden; }
+  .dancing-lights-4 > div:nth-child(1) {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 30px;
+    top: 45px; 
+    left:0px;
+
+    -webkit-animation: dancing-lights-rotate 2s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+            animation: dancing-lights-rotate 2s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+  }
+  .dancing-lights-4 > div:nth-child(2) {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 30px;
+    top: 45px; 
+    left:140px;
+
+    -webkit-animation: anti-dancing-lights-rotate 1.5s -0.6s infinite cubic-bezier(0.42,0,1,1);
+            animation: anti-dancing-lights-rotate 1.5s -0.6s infinite cubic-bezier(0.42,0,1,1);
+  }
+  .dancing-lights-4 > div:nth-child(3) {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 30px;
+    top: 0px; 
+    left:0px;
+
+    -webkit-animation: dancing-lights-rotate 2.5s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+            animation: dancing-lights-rotate 2.5s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+  }
+  .dancing-lights-4 > div:nth-child(4) {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 30px;
+    top: 0px; 
+    left:140px;
+
+    -webkit-animation: anti-dancing-lights-rotate 1s -0.6s infinite cubic-bezier(0.42,0,1,1);
+            animation: anti-dancing-lights-rotate 1s -0.6s infinite cubic-bezier(0.42,0,1,1);
+  }
+
+.dancing-lights-6 {
+    position: relative;
+    width: 150px;
+    height:100px;
+    overflow: hidden; }
+  .dancing-lights-6 > div:nth-child(1) {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 30px;
+    top: 45px; 
+    left:0px;
+
+    -webkit-animation: dancing-lights-rotate 2.5s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+            animation: dancing-lights-rotate 2.5s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+  }
+  .dancing-lights-6 > div:nth-child(2) {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 30px;
+    top: 45px; 
+    left:140px;
+
+    -webkit-animation: anti-dancing-lights-rotate 2.0s -0.6s infinite cubic-bezier(0.42,0,1,1);
+            animation: anti-dancing-lights-rotate 2.0s -0.6s infinite cubic-bezier(0.42,0,1,1);
+  }
+  .dancing-lights-6 > div:nth-child(3) {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 30px;
+    top: 0px; 
+    left:0px;
+
+    -webkit-animation: dancing-lights-rotate 3.0s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+            animation: dancing-lights-rotate 3.0s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+  }
+  .dancing-lights-6 > div:nth-child(4) {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 30px;
+    top: 0px; 
+    left:140px;
+
+    -webkit-animation: anti-dancing-lights-rotate 1.5s -0.6s infinite cubic-bezier(0.42,0,1,1);
+            animation: anti-dancing-lights-rotate 1.5s -0.6s infinite cubic-bezier(0.42,0,1,1);
+  }
+  .dancing-lights-6 > div:nth-child(5) {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 30px;
+    top: 45px; 
+    left:0px;
+
+    -webkit-animation: dancing-lights-rotate 3.5s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+            animation: dancing-lights-rotate 3.5s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+  }
+  .dancing-lights-6 > div:nth-child(6) {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 30px;
+    top: 45px; 
+    left:140px;
+
+    -webkit-animation: anti-dancing-lights-rotate 1.0s -0.6s infinite cubic-bezier(0.42,0,1,1);
+            animation: anti-dancing-lights-rotate 1.0s -0.6s infinite cubic-bezier(0.42,0,1,1);
+  }
+
+.dancing-lights-8{
+    position: relative;
+    width: 150px;
+    height:100px;
+    overflow: hidden; }
+  .dancing-lights-8> div:nth-child(1) {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 30px;
+    top: 45px; 
+    left:0px;
+
+    -webkit-animation: dancing-lights-rotate 2.5s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+            animation: dancing-lights-rotate 2.5s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+  }
+  .dancing-lights-8> div:nth-child(2) {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 30px;
+    top: 45px; 
+    left:140px;
+
+    -webkit-animation: anti-dancing-lights-rotate 2.0s -0.6s infinite cubic-bezier(0.42,0,1,1);
+            animation: anti-dancing-lights-rotate 2.0s -0.6s infinite cubic-bezier(0.42,0,1,1);
+  }
+  .dancing-lights-8> div:nth-child(3) {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 30px;
+    top: 0px; 
+    left:0px;
+
+    -webkit-animation: dancing-lights-rotate 3.0s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+            animation: dancing-lights-rotate 3.0s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+  }
+  .dancing-lights-8> div:nth-child(4) {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 30px;
+    top: 0px; 
+    left:140px;
+
+    -webkit-animation: anti-dancing-lights-rotate 1.5s -0.6s infinite cubic-bezier(0.42,0,1,1);
+            animation: anti-dancing-lights-rotate 1.5s -0.6s infinite cubic-bezier(0.42,0,1,1);
+  }
+  .dancing-lights-8> div:nth-child(5) {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 30px;
+    top: 45px; 
+    left:0px;
+
+    -webkit-animation: dancing-lights-rotate 3.5s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+            animation: dancing-lights-rotate 3.5s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+  }
+  .dancing-lights-8> div:nth-child(6) {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 30px;
+    top: 45px; 
+    left:140px;
+
+    -webkit-animation: anti-dancing-lights-rotate 1.0s -0.6s infinite cubic-bezier(0.42,0,1,1);
+            animation: anti-dancing-lights-rotate 1.0s -0.6s infinite cubic-bezier(0.42,0,1,1);
+  }
+  .dancing-lights-8> div:nth-child(7) {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 30px;
+    top: 45px; 
+    left:0px;
+
+    -webkit-animation: dancing-lights-rotate 4.5s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+            animation: dancing-lights-rotate 4.5s -0.6s infinite cubic-bezier(0.42,0,0.58,1);
+  }
+  .dancing-lights-8> div:nth-child(8) {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 30px;
+    top: 45px; 
+    left:140px;
+
+    -webkit-animation: anti-dancing-lights-rotate 0.5s -0.6s infinite cubic-bezier(0.42,0,1,1);
+            animation: anti-dancing-lights-rotate 0.5s -0.6s infinite cubic-bezier(0.42,0,1,1);
   }
