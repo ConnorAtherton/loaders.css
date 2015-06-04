@@ -38,3 +38,50 @@ $(function() {
   $('.loader-inner.semi-circle-spin').html(addDivs(1));
 
 });
+
+
+
+(function($){
+
+    var defaluts = {
+        proportion: 1,
+        backgroundcolor: "#000000",
+    }
+
+    function getpx(object, pro, proportion){
+        var px = object.css(pro);
+        if(px == "auto")
+        {
+            return px;
+        }
+        var e = px.indexOf("p");
+        var num = px.substring(0, e);
+        num = num* proportion;
+        return num
+    }
+
+    $.fn.Loaders =function(options){
+        var settings = $.extend(defaluts, options);
+
+        return this.each(function(){
+            var $this = $(this);
+            $this.css("width",getpx($this, "width",settings.proportion));
+            var childrens = $this.children("div");
+            childrens.css({
+                "background-color":settings.backgroundcolor,
+                width: getpx(childrens, "width", settings.proportion),
+                height:getpx(childrens, "height", settings.proportion),
+                margin: getpx(childrens, "margin", settings.proportion),
+            });
+            childrens.each(function(){
+                var obj = $(this);
+                obj.css("top", getpx(obj, "top", settings.proportion));
+                obj.css("left", getpx(obj, "left", settings.proportion));
+            });
+        });
+
+    }
+
+})(jQuery);
+
+
