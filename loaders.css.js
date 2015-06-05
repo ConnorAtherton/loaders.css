@@ -39,14 +39,7 @@ $(function() {
 
 });
 
-
-
 (function($){
-
-    var defaluts = {
-        proportion: 1,
-        backgroundcolor: "#000000",
-    }
 
     function getpx(object, pro, proportion){
         var px = object.css(pro);
@@ -61,12 +54,19 @@ $(function() {
     }
 
     $.fn.Loaders =function(options){
+        var defaluts = {
+          proportion: 1,
+          backgroundcolor: "#ffffff",
+          };
         var settings = $.extend(defaluts, options);
 
         return this.each(function(){
             var $this = $(this);
-            $this.css("width",getpx($this, "width",settings.proportion));
             var childrens = $this.children("div");
+
+            if(childrens.length == 0) return;
+
+            $this.css("width",getpx($this, "width",settings.proportion));
             childrens.css({
                 "background-color":settings.backgroundcolor,
                 width: getpx(childrens, "width", settings.proportion),
