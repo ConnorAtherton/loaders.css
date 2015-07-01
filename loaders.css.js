@@ -41,4 +41,4 @@
 
   });
 
-}).call(window, window.jQuery || window.Zepto || window.$);
+}).call(window, window.$ || window.jQuery || window.Zepto);
