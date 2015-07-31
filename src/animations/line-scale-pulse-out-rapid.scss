@@ -20,6 +20,7 @@
     @include global-animation();
 
     display: inline-block;
+    vertical-align: middle;
     animation: line-scale-pulse-out-rapid 0.9s -0.5s infinite cubic-bezier(.11,.49,.38,.78);
 
     &:nth-child(2), &:nth-child(4) {
