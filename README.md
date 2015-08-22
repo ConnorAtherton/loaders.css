@@ -48,7 +48,7 @@ npm i --save-dev loaders.css
 Add styles to the correct child `div` elements
 
 ``` css
-.ball-grid-pulse > div: {
+.ball-grid-pulse > div {
   background: orange;
 }
 ```
