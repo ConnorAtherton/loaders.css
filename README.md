@@ -84,7 +84,7 @@ in a browser to see your animation running.
 A few other folks have taken loaders and ported them elsewhere.
 
 - **React** - [Jon Jaques](https://github.com/jonjaques) built a React demo you can check out [here](https://github.com/jonjaques/react-loaders)
-- **Angular** - [the-corman](https://github.com/the-cormoran/angular-loaders) created some directives for angular, as did [Mesadow](https://github.com/Masadow) in [this pr](https://github.com/ConnorAtherton/loaders.css/pull/50)
+- **Angular** - [the-corman](https://github.com/the-cormoran/angular-loaders) created some directives for angular, as did [Masadow](https://github.com/Masadow) in [this pr](https://github.com/ConnorAtherton/loaders.css/pull/50)
 - **iOS** - [ninjaprox](https://github.com/ninjaprox/NVActivityIndicatorView) and [ontovnik](https://github.com/gontovnik/DGActivityIndicatorView)
 - **Android** - [Jack Wang](https://github.com/81813780/AVLoadingIndicatorView) created a library and [technofreaky](https://github.com/technofreaky/Loaders.CSS-Android-App) created an app
 
