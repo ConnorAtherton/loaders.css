@@ -39,6 +39,7 @@ npm i --save-dev loaders.css
 - Include `loaders.min.css`, jQuery, and `loaders.css.js`
 - Create an element and add the animation class (e.g. `<div class="loader-inner ball-pulse"></div>`)
 - `loaders.js` is a simple helper to inject the correct number of div elements for each animation
+- To initialise loaders that are added after page load select the div and call `loaders` on them (e.g. `$('.loader-inner').loaders()`)
 - Enjoy
 
 ### Customising
