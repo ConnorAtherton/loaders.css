@@ -26,8 +26,8 @@
     "gulp-cssmin": "^0.1.6",
     "gulp-jade": "^0.10.0",
     "gulp-rename": "^1.2.0",
-    "gulp-sass": "^1.2.4",
-    "scss-lint": "0.0.0",
-    "gulp-util": "^3.0.3"
+    "gulp-sass": "^2.1.1",
+    "gulp-util": "^3.0.3",
+    "scss-lint": "0.0.0"
   }
 }
