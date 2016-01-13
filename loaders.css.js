@@ -28,7 +28,8 @@
     'triangle-skew-spin': 1,
     'pacman': 5,
     'ball-grid-beat': 9,
-    'semi-circle-spin': 1
+    'semi-circle-spin': 1,
+    'ball-scale-random': 3
   };
 
   var addDivs = function(n) {
@@ -50,11 +51,9 @@
   };
 
   $(function() {
-
     $.each(divs, function(key, value) {
       $('.loader-inner.' + key).html(addDivs(value));
     })
-
   });
 
 }).call(window, window.$ || window.jQuery || window.Zepto);
