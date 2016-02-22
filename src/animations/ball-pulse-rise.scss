@@ -7,37 +7,43 @@ $rise-amount: 30px;
   0% {
     transform: scale(1.1);
   }
+
   25% {
     transform: translateY(-$rise-amount);
   }
+
   50% {
-    transform: scale(0.4);
+    transform: scale(.4);
   }
+
   75% {
     transform: translateY($rise-amount);
   }
+
   100% {
-    transform: translateY(0);
-    transform: scale(1.0);
+    transform: scale(1) translateY(0);
   }
 }
 
 @keyframes ball-pulse-rise-odd {
   0% {
-    transform: scale(0.4);
+    transform: scale(.4);
   }
+
   25% {
     transform: translateY($rise-amount);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   75% {
     transform: translateY(-$rise-amount);
   }
+
   100% {
-    transform: translateY(0);
-    transform: scale(0.75);
+    transform: scale(.75), translateY(0);
   }
 }
 
@@ -46,12 +52,11 @@ $rise-amount: 30px;
   > div {
     @include balls();
     @include global-animation();
-
-    display: inline-block;
-    animation-duration: 1s;
-    animation-timing-function: cubic-bezier(.15,.46,.9,.6);
-    animation-iteration-count: infinite;
     animation-delay: 0;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.15, .46, .9, .6);
+    display: inline-block;
 
     &:nth-child(2n) {
       animation-name: ball-pulse-rise-even;

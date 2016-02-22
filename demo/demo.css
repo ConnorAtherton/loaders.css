@@ -31,7 +31,7 @@ main {
   margin: 4em auto;
   opacity: 0; }
   main.loaded {
-    transition: opacity 0.25s linear;
+    transition: opacity .25s linear;
     opacity: 1; }
   main header {
     width: 100%; }
@@ -79,11 +79,11 @@ main {
  */
 .btn {
   color: #fff;
-  padding: 0.75rem 1.25rem;
+  padding: .75rem 1.25rem;
   border: 2px solid #fff;
   border-radius: 4px;
   text-decoration: none;
-  transition: transform 0.1s ease-out, border 0.1s ease-out, background-color 0.15s ease-out, color 0.1s ease-out;
+  transition: transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
   margin: 2rem 0; }
   .btn:hover {
     transform: scale(1.01562);

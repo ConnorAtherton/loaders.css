@@ -1,21 +1,15 @@
-/**
- * Copyright (c) 2016 Connor Atherton
- *
- * All animations must live in their own file
- * in the animations directory and be included
- * here.
- *
- */
 
-/**
- * Styles shared by multiple animations
- */
+// Copyright (c) 2016 Connor Atherton
+
+// All animations must live in their own file
+// in the animations directory and be included
+// here.
+
+// Styles shared by multiple animations
 @import 'variables';
 @import 'mixins';
 
-/**
- * Dots
- */
+// Dots
 @import 'animations/ball-pulse';
 @import 'animations/ball-pulse-sync';
 @import 'animations/ball-scale';
@@ -37,18 +31,14 @@
 @import 'animations/ball-zig-zag';
 @import 'animations/ball-zig-zag-deflect';
 
-/**
- * Lines
- */
+// Lines
 @import 'animations/line-scale';
 @import 'animations/line-scale-random';
 @import 'animations/line-scale-pulse-out';
 @import 'animations/line-scale-pulse-out-rapid';
 @import 'animations/line-spin-fade-loader';
 
-/**
- * Misc
- */
+// Misc
 @import 'animations/triangle-skew-spin';
 @import 'animations/square-spin';
 @import 'animations/pacman';

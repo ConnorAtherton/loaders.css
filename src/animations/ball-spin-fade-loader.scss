@@ -6,9 +6,10 @@ $radius: 25px;
 
 @keyframes ball-spin-fade-loader {
   50% {
-    opacity: 0.3;
-    transform: scale(0.4);
+    opacity: .3;
+    transform: scale(.4);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -22,32 +23,32 @@ $radius: 25px;
       $quarter: ($radius / 2) + ($radius / 5.5);
 
       @if $i == 1 {
+        left: 0;
         top: $radius;
-        left: 0;
       } @else if $i == 2 {
-        top: $quarter;
         left: $quarter;
+        top: $quarter;
       } @else if $i == 3 {
-        top: 0;
         left: $radius;
-      } @else if $i == 4 {
-        top: -$quarter;
-        left: $quarter;
-      } @else if $i == 5 {
-        top: -$radius;
-        left: 0;
-      } @else if $i == 6 {
-        top: -$quarter;
-        left: -$quarter;
-      } @else if $i == 7 {
         top: 0;
-        left: -$radius;
-      } @else if $i == 8 {
-        top: $quarter;
+      } @else if $i == 4 {
+        left: $quarter;
+        top: -$quarter;
+      } @else if $i == 5 {
+        left: 0;
+        top: -$radius;
+      } @else if $i == 6 {
         left: -$quarter;
+        top: -$quarter;
+      } @else if $i == 7 {
+        left: -$radius;
+        top: 0;
+      } @else if $i == 8 {
+        left: -$quarter;
+        top: $quarter;
       }
 
-      animation: ball-spin-fade-loader 1s delay(0.12s, $n, $i - 1) infinite linear;
+      animation: ball-spin-fade-loader 1s delay(.12s, $n, $i - 1) infinite linear;
     }
   }
 }
@@ -55,9 +56,9 @@ $radius: 25px;
 .ball-spin-fade-loader {
   @include ball-spin-fade-loader();
 
+  left: -10px;
   position: relative;
   top: -10px;
-  left: -10px;
 
   > div {
     @include balls();

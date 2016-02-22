@@ -5,11 +5,13 @@
   0% {
     transform: rotate(0deg) scale(1);
   }
+
   50% {
-    transform: rotate(180deg) scale(0.6);
+    transform: rotate(180deg) scale(.6);
   }
+
   100% {
-   transform: rotate(360deg) scale(1);
+    transform: rotate(360deg) scale(1);
  }
 }
 
@@ -18,13 +20,12 @@
   > div {
     @include balls();
     @include global-animation();
-
+    animation: rotate .75s 0s linear infinite;
+    background: transparent !important;
     border: 2px solid $primary-color;
     border-bottom-color: transparent;
+    display: inline-block;
     height: 25px;
     width: 25px;
-    background: transparent !important;
-    display: inline-block;
-    animation: rotate 0.75s 0s linear infinite;
   }
 }

@@ -5,21 +5,23 @@
   0% {
     transform: scale(1);
   }
+
   50% {
-    transform: scale(0.5);
-    opacity: 0.7;
+    opacity: .7;
+    transform: scale(.5);
   }
+
   100% {
-    transform: scale(1);
     opacity: 1;
+    transform: scale(1);
   }
 }
 
 @mixin ball-grid-pulse($n:9) {
   @for $i from 1 through $n {
     > div:nth-child(#{$i}) {
-      animation-delay: ((random(100) / 100) - 0.2) + s;
-      animation-duration: ((random(100) / 100) + 0.6) + s;
+      animation-delay: ((random(100) / 100) - .2) + s;
+      animation-duration: ((random(100) / 100) + .6) + s;
     }
   }
 
@@ -32,11 +34,10 @@
   > div {
     @include balls();
     @include global-animation();
-
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-name: ball-grid-pulse;
     display: inline-block;
     float: left;
-    animation-name: ball-grid-pulse;
-    animation-iteration-count: infinite;
-    animation-delay: 0;
   }
 }

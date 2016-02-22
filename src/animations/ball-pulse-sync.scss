@@ -8,9 +8,11 @@ $amount: 10px;
   33% {
     transform: translateY($amount);
   }
+
   66% {
     transform: translateY(-$amount);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -19,7 +21,7 @@ $amount: 10px;
 @mixin ball-pulse-sync($n: 3, $start: 1) {
   @for $i from $start through $n {
     > div:nth-child(#{$i}) {
-      animation: ball-pulse-sync 0.6s delay(0.07s, $n, $i) infinite ease-in-out;
+      animation: ball-pulse-sync .6s delay(.07s, $n, $i) infinite ease-in-out;
     }
   }
 }
