@@ -5,8 +5,9 @@ $radius: 45px;
 
 @keyframes ball-spin-loader {
   75% {
-    opacity: 0.2;
+    opacity: .2;
   }
+
   100% {
     opacity: 1;
   }
@@ -19,32 +20,32 @@ $radius: 45px;
       $quarter: ($radius / 2) + ($radius / 5.5);
 
       @if $i == 1 {
+        left: 0;
         top: $radius;
-        left: 0;
       } @else if $i == 2 {
-        top: $quarter;
         left: $quarter;
+        top: $quarter;
       } @else if $i == 3 {
-        top: 0;
         left: $radius;
-      } @else if $i == 4 {
-        top: -$quarter;
-        left: $quarter;
-      } @else if $i == 5 {
-        top: -$radius;
-        left: 0;
-      } @else if $i == 6 {
-        top: -$quarter;
-        left: -$quarter;
-      } @else if $i == 7 {
         top: 0;
-        left: -$radius;
-      } @else if $i == 8 {
-        top: $quarter;
+      } @else if $i == 4 {
+        left: $quarter;
+        top: -$quarter;
+      } @else if $i == 5 {
+        left: 0;
+        top: -$radius;
+      } @else if $i == 6 {
         left: -$quarter;
+        top: -$quarter;
+      } @else if $i == 7 {
+        left: -$radius;
+        top: 0;
+      } @else if $i == 8 {
+        left: -$quarter;
+        top: $quarter;
       }
 
-      animation: ball-spin-loader 2s ($i * 0.9s) infinite linear;
+      animation: ball-spin-loader 2s ($i * .9s) infinite linear;
     }
   }
 }
@@ -56,10 +57,10 @@ $radius: 45px;
   > div {
     @include global-animation();
 
+    background: #008000;
+    border-radius: 100%;
+    height: 15px;
     position: absolute;
     width: 15px;
-    height: 15px;
-    border-radius: 100%;
-    background: green;
   }
 }

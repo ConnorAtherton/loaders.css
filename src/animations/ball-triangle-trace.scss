@@ -7,35 +7,42 @@ $amount: 50px;
   33% {
     transform: translate($amount / 2, -$amount);
   }
+
   66% {
-    transform: translate($amount, 0px);
+    transform: translate($amount, 0);
   }
+
   100% {
-    transform: translate(0px, 0px);
+    transform: translate(0, 0);
   }
+
 }
 
 @keyframes ball-triangle-path-2 {
   33% {
     transform: translate($amount / 2, $amount);
   }
+
   66% {
     transform: translate(- $amount / 2, $amount);
   }
+
   100% {
-    transform: translate(0px, 0px);
+    transform: translate(0, 0);
   }
 }
 
 @keyframes ball-triangle-path-3 {
   33% {
-    transform: translate(-$amount, 0px);
+    transform: translate(-$amount, 0);
   }
+
   66% {
     transform: translate(- $amount / 2, -$amount);
   }
+
   100% {
-    transform: translate(0px, 0px);
+    transform: translate(0, 0);
   }
 }
 
@@ -44,28 +51,27 @@ $amount: 50px;
 
   @for $i from 1 through $n {
     > div:nth-child(#{$i}) {
-      animation-name: nth($animations, $i);
       animation-delay: 0;
       animation-duration: 2s;
-      animation-timing-function: ease-in-out;
       animation-iteration-count: infinite;
+      animation-name: nth($animations, $i);
+      animation-timing-function: ease-in-out;
     }
   }
 }
 
 .ball-triangle-path {
-  position: relative;
   @include ball-triangle-path();
+  position: relative;
   transform: translate(-$amount / 1.667, -$amount / 1.333);
 
   > div {
     @include global-animation();
-
+    border: 1px solid $primary-color;
+    border-radius: 100%;
+    height: 10px;
     position: absolute;
     width: 10px;
-    height: 10px;
-    border-radius: 100%;
-    border: 1px solid $primary-color;
 
     &:nth-of-type(1) {
       top: $amount;
@@ -76,8 +82,8 @@ $amount: 50px;
     }
 
     &:nth-of-type(3) {
-      top: $amount;
       left: $amount;
+      top: $amount;
     }
   }
 }

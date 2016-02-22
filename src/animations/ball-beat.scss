@@ -3,9 +3,10 @@
 
 @keyframes ball-beat {
   50% {
-    opacity: 0.2;
-    transform: scale(0.75);
+    opacity: .2;
+    transform: scale(.75);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -17,12 +18,11 @@
   > div {
     @include balls();
     @include global-animation();
-
+    animation: ball-beat .7s 0s infinite linear;
     display: inline-block;
-    animation: ball-beat 0.7s 0s infinite linear;
 
     &:nth-child(2n-1) {
-      animation-delay: -0.35s !important;
+      animation-delay: -.35s !important;
     }
   }
 }

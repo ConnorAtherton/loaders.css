@@ -8,18 +8,16 @@
 
 @mixin balls() {
   @include global-bg();
-
-  width: $ball-size;
-  height: $ball-size;
   border-radius: 100%;
+  height: $ball-size;
   margin: $margin;
+  width: $ball-size;
 }
 
 @mixin lines() {
   @include global-bg();
-
-  width: $line-width;
-  height: $line-height;
   border-radius: 2px;
+  height: $line-height;
   margin: $margin;
+  width: $line-width;
 }

@@ -3,11 +3,11 @@
 
 @keyframes ball-pulse-round {
   0%, 80%, 100% {
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
-  } 40% {
-    transform: scale(1.0);
-    -webkit-transform: scale(1.0);
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1);
   }
 }
 
@@ -16,9 +16,9 @@
   > div {
     @include global-animation();
 
-    width: 10px;
-    height: 10px;
     animation: ball-pulse-round 1.2s infinite ease-in-out;
+    height: 10px;
+    width: 10px;
   }
 }
 

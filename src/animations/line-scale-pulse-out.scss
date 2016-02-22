@@ -4,13 +4,15 @@
 
 @keyframes line-scale-pulse-out {
   0% {
-    transform: scaley(1.0);
+    transform: scaley(1);
   }
+
   50% {
-    transform: scaley(0.4);
+    transform: scaley(.4);
   }
+
   100% {
-    transform: scaley(1.0);
+    transform: scaley(1);
   }
 }
 
@@ -20,15 +22,17 @@
     @include lines();
     @include global-animation();
 
+    animation: line-scale-pulse-out .9s delay(.2s, 3, 0) infinite cubic-bezier(.85, .25, .37, .85);
     display: inline-block;
-    animation: line-scale-pulse-out 0.9s delay(0.2s, 3, 0) infinite cubic-bezier(.85,.25,.37,.85);
 
-    &:nth-child(2), &:nth-child(4) {
-      animation-delay: delay(0.2s, 3, 1) !important;
+    &:nth-child(2),
+    &:nth-child(4) {
+      animation-delay: delay(.2s, 3, 1) !important;
     }
 
-    &:nth-child(1), &:nth-child(5) {
-      animation-delay: delay(0.2s, 3, 2) !important;
+    &:nth-child(1),
+    &:nth-child(5) {
+      animation-delay: delay(.2s, 3, 2) !important;
     }
 
   }

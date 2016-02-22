@@ -3,11 +3,13 @@
 
 @keyframes rotate {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0);
   }
+
   50% {
     transform: rotate(180deg);
   }
+
   100% {
     transform: rotate(360deg);
  }
@@ -19,29 +21,28 @@
   > div {
     @include balls();
     @include global-animation();
-
     position: relative;
 
     &:first-child {
-      animation: rotate 1s 0s cubic-bezier(.7,-.13,.22,.86) infinite;
+      animation: rotate 1s 0s cubic-bezier(.7, -.13, .22, .86) infinite;
     }
 
-    &:before, &:after {
+    &::before,
+    &::after {
       @include balls();
-
-      content: "";
+      content: '';
+      opacity: .8;
       position: absolute;
-      opacity: 0.8;
     }
 
-    &:before {
-      top: 0px;
+    &::before {
       left: -28px;
+      top: 0;
     }
 
-    &:after {
-      top: 0px;
+    &::after {
       left: 25px;
+      top: 0;
     }
   }
 }

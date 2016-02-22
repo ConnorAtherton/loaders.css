@@ -3,14 +3,17 @@
 
 @keyframes rotate {
   0% {
-    transform: rotate(0deg) scale(1);
+    transform: rotate(0) scale(1);
   }
+
   50% {
-    transform: rotate(180deg) scale(0.6);
+    transform: rotate(180deg) scale(.6);
   }
+
   100% {
-   transform: rotate(360deg) scale(1);
+    transform: rotate(360deg) scale(1);
  }
+
 }
 
 .ball-clip-rotate-multiple {
@@ -18,27 +21,26 @@
 
   > div {
     @include global-animation();
-
-    position: absolute;
-    left: -20px;
-    top: -20px;
+    animation: rotate 1s 0s ease-in-out infinite;
     border: 2px solid $primary-color;
     border-bottom-color: transparent;
-    border-top-color: transparent;
     border-radius: 100%;
+    border-top-color: transparent;
     height: 35px;
+    left: -20px;
+    position: absolute;
+    top: -20px;
     width: 35px;
-    animation: rotate 1s 0s ease-in-out infinite;
 
     &:last-child {
-      display: inline-block;
-      top: -10px;
-      left: -10px;
-      width: 15px;
-      height: 15px;
-      animation-duration: 0.5s;
-      border-color: $primary-color transparent $primary-color transparent;
       animation-direction: reverse;
+      animation-duration: .5s;
+      border-color: $primary-color transparent;
+      display: inline-block;
+      height: 15px;
+      left: -10px;
+      top: -10px;
+      width: 15px;
     }
   }
 }

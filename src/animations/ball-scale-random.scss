@@ -1,28 +1,28 @@
-@import "ball-scale";
+@import 'ball-scale';
 
 .ball-scale-random {
-  width: 37px;
   height: 40px;
+  width: 37px;
 
   > div {
     @include balls();
     @include global-animation();
-    
-    position: absolute;
+
+    animation: ball-scale 1s 0s ease-in-out infinite;
     display: inline-block;
     height: 30px;
+    position: absolute;
     width: 30px;
-    animation: ball-scale 1s 0s ease-in-out infinite;
 
     &:nth-child(1) {
+      animation: ball-scale 1s .2s ease-in-out infinite;
       margin-left: -7px;
-      animation: ball-scale 1s 0.2s ease-in-out infinite;
     }
 
     &:nth-child(3) {
+      animation: ball-scale 1s .5s ease-in-out infinite;
       margin-left: -2px;
       margin-top: 9px;
-      animation: ball-scale 1s 0.5s ease-in-out infinite;
     }
   }
 }
