@@ -18,8 +18,8 @@ $size: 60px;
   }
 }
 
-@mixin ball-scale-multiple ($n:3, $start:0) {
-  @for $i from 2 through $n {
+@mixin ball-scale-multiple ($n: 3, $start: 2) {
+  @for $i from $start through $n {
     > div:nth-child(#{$i}) {
       animation-delay: delay(0.2s, $n, $i - 1);
     }

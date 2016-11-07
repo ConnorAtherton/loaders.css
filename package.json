@@ -1,8 +1,9 @@
 {
   "name": "loaders.css",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Loading animations in pure css",
-  "main": "src/loaders.css",
+  "main": "loaders.css",
+  "style": "loaders.css",
   "repository": {
     "type": "git",
     "url": "git@github.com:ConnorAtherton/loaders.css.git"
@@ -25,9 +26,10 @@
     "gulp-autoprefixer": "^2.0.0",
     "gulp-cssmin": "^0.1.6",
     "gulp-jade": "^0.10.0",
+    "gulp-plumber": "1.0.1",
     "gulp-rename": "^1.2.0",
-    "gulp-sass": "^1.2.4",
-    "scss-lint": "0.0.0",
-    "gulp-util": "^3.0.3"
+    "gulp-sass": "^2.1.1",
+    "gulp-util": "^3.0.3",
+    "scss-lint": "0.0.0"
   }
 }

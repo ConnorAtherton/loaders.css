@@ -5,17 +5,21 @@ cssmin = require 'gulp-cssmin'
 rename = require 'gulp-rename'
 autoprefixer = require 'gulp-autoprefixer'
 gutil = require 'gulp-util'
+plumber = require 'gulp-plumber'
 
 gulp.task 'scss:compile', ->
   gulp.src './src/loaders.scss'
+    .pipe plumber((err) -> console.log(err.stack))
     .pipe sass()
     .pipe autoprefixer "last 2 versions", "> 1%", "ie 8", {
         map: false
       }
+    .pipe plumber.stop()
     .pipe gulp.dest('./')
     .pipe cssmin()
     .pipe rename suffix: '.min'
-    .pipe gulp.dest './' ;
+    .pipe gulp.dest './'
+    .on 'finish', -> gutil.log('scss build finished.')
 
 gulp.task 'demo:scss:compile',  ->
   gulp.src './demo/src/demo.scss'

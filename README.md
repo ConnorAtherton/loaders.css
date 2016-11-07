@@ -39,6 +39,7 @@ npm i --save-dev loaders.css
 - Include `loaders.min.css`, jQuery, and `loaders.css.js`
 - Create an element and add the animation class (e.g. `<div class="loader-inner ball-pulse"></div>`)
 - `loaders.js` is a simple helper to inject the correct number of div elements for each animation
+- To initialise loaders that are added after page load select the div and call `loaders` on them (e.g. `$('.loader-inner').loaders()`)
 - Enjoy
 
 ### Customising
@@ -48,7 +49,7 @@ npm i --save-dev loaders.css
 Add styles to the correct child `div` elements
 
 ``` css
-.ball-grid-pulse > div: {
+.ball-grid-pulse > div {
   background: orange;
 }
 ```
@@ -79,13 +80,20 @@ in a browser to see your animation running.
 - http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/
 - http://frontendbabel.info/articles/webpage-rendering-101/
 
-[Jon Jaques](https://github.com/jonjaques) has built a small React demo you can check out [here](https://github.com/jonjaques/react-loaders)
+### Inspired by loaders.css
+
+A few other folks have taken loaders and ported them elsewhere.
+
+- **React** - [Jon Jaques](https://github.com/jonjaques) built a React demo you can check out [here](https://github.com/jonjaques/react-loaders)
+- **Angular** - [the-corman](https://github.com/the-cormoran/angular-loaders) created some directives for angular, as did [Masadow](https://github.com/Masadow) in [this pr](https://github.com/ConnorAtherton/loaders.css/pull/50)
+- **iOS** - [ninjaprox](https://github.com/ninjaprox/NVActivityIndicatorView) and [ontovnik](https://github.com/gontovnik/DGActivityIndicatorView)
+- **Android** - [Jack Wang](https://github.com/81813780/AVLoadingIndicatorView) created a library and [technofreaky](https://github.com/technofreaky/Loaders.CSS-Android-App) created an app
 
 ### Licence
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Connor Atherton
+Copyright (c) 2016 Connor Atherton
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
