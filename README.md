@@ -50,7 +50,7 @@ Add styles to the correct child `div` elements
 
 ``` css
 .ball-grid-pulse > div {
-  background: orange;
+  background-color: orange;
 }
 ```
 
