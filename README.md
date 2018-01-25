@@ -25,7 +25,7 @@ bower install loaders.css
 ```
 
 ```
-npm i --save-dev loaders.css
+npm i --save loaders.css
 ```
 
 ### Usage
