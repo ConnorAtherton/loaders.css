@@ -87,6 +87,7 @@ A few other folks have taken loaders and ported them elsewhere.
 - **React** - [Jon Jaques](https://github.com/jonjaques) built a React demo you can check out [here](https://github.com/jonjaques/react-loaders)
 - **Vue** - [Kirill Khoroshilov](https://github.com/Hokid) loaders wrapped into components [vue-loaders](https://github.com/Hokid/vue-loaders)
 - **Angular** - [the-corman](https://github.com/the-cormoran/angular-loaders) created some directives for angular, as did [Masadow](https://github.com/Masadow) in [this pr](https://github.com/ConnorAtherton/loaders.css/pull/50)
+- **Ember** - [Stanislav Romanov](https://github.com/kaermorchen) created an Ember addon [ember-cli-loaders](https://github.com/kaermorchen/ember-cli-loaders) for using Loaders.css in Ember applications
 - **iOS** - [ninjaprox](https://github.com/ninjaprox/NVActivityIndicatorView) and [ontovnik](https://github.com/gontovnik/DGActivityIndicatorView)
 - **Android** - [Jack Wang](https://github.com/81813780/AVLoadingIndicatorView) created a library and [technofreaky](https://github.com/technofreaky/Loaders.CSS-Android-App) created an app
 
