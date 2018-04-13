@@ -54,6 +54,16 @@ Add styles to the correct child `div` elements
 }
 ```
 
+##### Changing the loader size
+
+Use a [2D Scale](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale) `transform`
+
+```css
+.loader-small .loader-inner {
+  transform: scale(0.5, 0.5);
+}
+```
+
 ### Browser support
 
 Check the [can I use](http://caniuse.com/#search=css-animation) [tables](http://caniuse.com/#search=css-transform).
