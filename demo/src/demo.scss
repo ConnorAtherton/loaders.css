@@ -81,6 +81,68 @@ main {
       height: 200px;
       align-items: center;
       justify-content: center;
+      perspective: 500px;
+      
+      .tooltip {
+        -webkit-transition: all 200ms ease;
+        transition: all 200ms ease;
+        -webkit-transform: translate3d(-50%, 0%, 0);
+        transform: translate3d(-50%, 0%, 0);
+        -webkit-transform-origin: 0 10px;
+        transform-origin: 0 10px;
+        background-color: #fff;
+        border-radius: 4px;
+        color: #2f2f2f;
+        display: block;
+        font-size: 14px;
+        line-height: 1;
+        left: 50%;
+        opacity: 0;
+        padding: 4px 20px;
+        position: absolute;
+        text-align: left;
+        top: 80%;
+        pointer-events: none;
+        white-space: nowrap;
+
+        &:before {
+          border: 6px solid;
+          border-color: transparent;
+          border-bottom-color: #fff;
+          content: ' ';
+          display: block;
+          height: 0;
+          left: 50%;
+          margin-left: -10px;
+          position: absolute;
+          top: -12px;
+          width: 0;
+        }
+
+        &:after {
+          content: ' ';
+          display: block;
+          position: absolute;
+          bottom: -20px;
+          left: 0;
+          width: 100%;
+          height: 20px;
+        }
+
+        &:hover {
+          -webkit-transform: rotateX(0deg) translate3d(-50%, -10%, 0);
+          transform: rotateX(0deg) translate3d(-50%, -10%, 0);
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+
+      &:hover .tooltip {
+        -webkit-transform: translate3d(-50%, -10%, 0);
+        transform: translate3d(-50%, -10%, 0);
+        opacity: 1;
+        pointer-events: auto;
+      }
     }
   }
 }
