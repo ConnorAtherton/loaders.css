@@ -34,7 +34,7 @@
 
   var addDivs = function(n) {
     var arr = [];
-    for (i = 1; i <= n; i++) {
+    for (var i = 1; i <= n; i++) {
       arr.push('<div></div>');
     }
     return arr;
