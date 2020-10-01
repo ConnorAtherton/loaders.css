@@ -10,18 +10,18 @@ body {
   font-size: 16px;
   background: #ed5565;
   color: #fff;
-  font-family: 'Source Sans Pro'; }
+font-family: 'Piazzolla', serif; }
 
 h1 {
   font-size: 2.8em;
   font-weight: 700;
-  letter-spacing: -1px;
+  letter-spacing: 1px;
   margin: 0.6rem 0; }
   h1 > span {
-    font-weight: 300; }
+    font-weight: 500; }
 
 h2 {
-  font-size: 1.15em;
+  font-size: 2em;
   font-weight: 300;
   margin: 0.3rem 0; }
 
@@ -132,12 +132,12 @@ main {
 .btn {
   color: #fff;
   padding: .75rem 1.25rem;
-  border: 2px solid #fff;
+  border: 2px solid #000;
   border-radius: 4px;
   text-decoration: none;
   transition: transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
   margin: 2rem 0; }
   .btn:hover {
-    transform: scale(1.01562);
+    transform: scale(2);
     background-color: #fff;
     color: #ed5565; }
