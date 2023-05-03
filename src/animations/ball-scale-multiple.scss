@@ -1,24 +1,25 @@
-@import '../variables';
-@import '../mixins';
-@import '../functions';
+@use "sass:math";
+@import "../variables";
+@import "../mixins";
+@import "../functions";
 
 $size: 60px;
 
 @keyframes ball-scale-multiple {
   0% {
-    transform: scale(0.0);
+    transform: scale(0);
     opacity: 0;
   }
   5% {
     opacity: 1;
   }
   100% {
-    transform: scale(1.0);
+    transform: scale(1);
     opacity: 0;
   }
 }
 
-@mixin ball-scale-multiple ($n: 3, $start: 2) {
+@mixin ball-scale-multiple($n: 3, $start: 2) {
   @for $i from $start through $n {
     > div:nth-child(#{$i}) {
       animation-delay: delay(0.2s, $n, $i - 1);
@@ -30,7 +31,7 @@ $size: 60px;
   @include ball-scale-multiple();
 
   position: relative;
-  transform: translateY(-$size / 2);
+  transform: translateY(math.div(-$size, 2));
 
   > div {
     @include balls();
